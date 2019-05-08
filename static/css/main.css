@@ -1,6 +1,12 @@
 .yellow {
     background-color: lightgoldenrodyellow ;
 }
+
+.frontpageimg {
+    max-width: 150%;
+    height: auto;
+}
+
 html, body {
     height: 100%;
     width: 100%;
