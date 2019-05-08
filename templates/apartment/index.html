@@ -1,7 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    <h3 class="red">Hello from the index function within the apartments app!</h3>
+    <div class="container login-container">
+        <div class="row">
+            <div class = "col-md-6 login-form-1">
+                <h3>Login</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" value="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" value="">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login">
+                    </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
