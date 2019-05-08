@@ -4,6 +4,7 @@
 
 <h3 class="yellow">Hello from the index function within the customer app!</h3>
 {% for customer in customers %}
+    <img class="apartm-img" src="{{customer.customerimage_set.first.image}}" /> <br>
     {{ customer.name }}
     {{ customer.phoneNR }}
     {{ customer.email }}
