@@ -9,8 +9,12 @@ html, body {
     margin: 0;
 }
 
+.frontpage {
+    background: url('/static/images/forsidumynd.jpg') no-repeat center center fixed;
+    height: 350px;
+}
+
 #logincontainer {
     text-align: center;
     width: 30%;
 }
-
