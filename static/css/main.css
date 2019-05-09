@@ -46,11 +46,25 @@ html, body {
     right: 0;
     left: 0;
     border: 0;
-    background-image: linear-gradient(to right,lightblue, midnightblue);
-    animation: animate-navbar 3s linear infinite alternate;
+    background-image: linear-gradient(to right,#2B59D5, #1A2D62);
+    animation: animate-navbar 4s linear infinite alternate;
 }
 
+@keyframes animate-navbar {
+    0% {
+        transform: rotate(0);}
+    100% {
+        transform: rotateZ(180deg);}
+}
 
 .form-group {
     margin-top: 0.7em;
+}
+
+.apartmentHeader {
+    text-align: center;
+}
+
+.profileHeader {
+    text-align: center;
 }
