@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-
+'''
 
 class Apartment(models.Model):
     address = models.CharField(max_length=255)
@@ -22,3 +22,4 @@ class ApartmentImage(models.Model):
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
     def __str__(self):
         return self.image
+'''

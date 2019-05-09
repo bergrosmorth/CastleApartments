@@ -1,7 +1,9 @@
-{% extends 'base.html' %}
+% extends 'base.html' %}
 
 {% block content %}
-{% for apartment in apartments %}
+    <h2>hello! here are apartments</h2>
+    <!--
+    {% for apartment in apartments %}
     <img class="apartm-img" src="{{apartment.apartmentimage_set.first.image}}" /> <br>
     {{ apartment.address }}
     {{ apartment.city }}
@@ -13,5 +15,5 @@
     {{ apartment.bedrooms }}
     {{ apartment.bathrooms }}
     <br>
-{% endfor %}
+    {% endfor %} -->
 {% endblock %}
