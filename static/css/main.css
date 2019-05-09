@@ -31,7 +31,13 @@ html, body {
     flex-flow: column;
     margin-top: 100px;
     width: 50%;
-
+    background: rgba(130,130,130,.3);
+    padding: 20px 22px;
+    border: 1px solid;
+    border-top-color: rgba(255,255,255,.4);
+    border-left-color: rgba(255,255,255,.4);
+    border-bottom-color: rgba(60,60,60,.4);
+    border-right-color: rgba(60,60,60,.4);
 }
 
 .login {
@@ -48,9 +54,8 @@ html, body {
 .navbar-brand {
     position: relative;
     color: steelblue;
-    text-effect: outline;
-    font-weight: bolder;
-    margin-top: 0.2em;
+    font-style: bold;
+    margin-top: 0.1em;
 }
 
 .navContent {
@@ -75,6 +80,10 @@ html, body {
         transform: rotate(0);}
     100% {
         transform: rotateZ(150deg);}
+}
+
+#searchbtn {
+    color: grey;
 }
 
 .form-group {
@@ -119,5 +128,11 @@ label[for=id_username] {
 
 label[for=id_password] {
     text-align: center;
+    color: whitesmoke;
+}
+
+label[for=id_password] {
+    text-align: center;
+    color: whitesmoke;
 }
 
