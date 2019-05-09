@@ -1,7 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
-'''
 
 class Apartment(models.Model):
     address = models.CharField(max_length=255)
@@ -9,10 +8,10 @@ class Apartment(models.Model):
     zip = models.IntegerField()
     country = models.CharField(max_length=255)
     price = models.IntegerField()
-    type = models.CharField(max_length=255)
     rooms = models.IntegerField()
-    bedrooms = models.IntegerField()
-    bathrooms = models.IntegerField()
+    description = models.CharField(max_length=999, blank=True)
+    realator = models.ForeignKey(User, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.address
 
@@ -20,6 +19,6 @@ class Apartment(models.Model):
 class ApartmentImage(models.Model):
     image = models.CharField(max_length=999)
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.image
-'''

@@ -15,7 +15,8 @@ html, body {
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-    height: 450px;
+    opacity: 0.9;
+    height: 30em;
 }
 
 #logincontainer {
@@ -80,6 +81,22 @@ html, body {
     text-align: center;
 }
 
+<<<<<<< HEAD
+.infoContainer {
+    margin-left: 10%
+}
+
+#editButton {
+    <!-- ## -->
+}
+
+.icon {
+    background-size: cover;
+    background-position: center;
+    height: 24px;
+
+}
+=======
 #loginbutton {
     margin-left: 60px;
 }
@@ -87,3 +104,4 @@ html, body {
 #registerbutton {
     margin-left: 52px;
 }
+>>>>>>> a9adc1beb1396b2243ec684ecbc62e0584430b58
