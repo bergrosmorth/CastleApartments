@@ -125,12 +125,16 @@ html, body {
 }
 
 label[for=id_username] {
-    color: whitesmoke;
-    margin-left: 30%
+    text-align: center;
 }
 
 label[for=id_password] {
+    text-align: center;
     color: whitesmoke;
-    margin-left: 30%
+}
+
+label[for=id_password] {
+    text-align: center;
+    color: whitesmoke;
 }
 
