@@ -15,12 +15,8 @@ html, body {
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-<<<<<<< HEAD
-    height: 30em;
     opacity: 0.9;
-=======
-    height: 450px;
->>>>>>> a9adc1beb1396b2243ec684ecbc62e0584430b58
+    height: 30em;
 }
 
 #logincontainer {
