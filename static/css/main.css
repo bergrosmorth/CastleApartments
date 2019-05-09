@@ -16,6 +16,7 @@ html, body {
     margin-right: -15px;
     margin-top: -20px;
     height: 32em;
+    opacity: 0.9;
 }
 
 #logincontainer {
@@ -48,7 +49,7 @@ html, body {
 
 .navbar-brand {
     position: relative;
-    color: floralwhite;
+    color: steelblue;
     text-effect: outline;
     font-weight: bolder;
     margin-top: 0.2em;
@@ -56,7 +57,7 @@ html, body {
 
 .navContent {
     margin-top: 0.7em;
-    color: midnightblue;;
+    color: steelblue;;
 }
 
 #navbar-animation {
@@ -67,7 +68,7 @@ html, body {
     right: 0;
     left: 0;
     border: 0;
-    background-image: linear-gradient(to right, lightsteelblue, royalblue);
+    background-image: linear-gradient(to right, floralwhite, lightsteelblue);
     animation: animate-navbar 4s linear infinite alternate;
 }
 
