@@ -21,7 +21,6 @@ html, body {
 #logincontainer {
     justify-content: center;
     width: 30%;
-    background-color: grey;
     opacity: 0.5%;
     padding: 0;
 }
