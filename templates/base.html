@@ -40,8 +40,8 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
               {% if user.is_authenticated %}
-                  <li><a href="#">Log out</a></li>
-                  <li><a href="#">My Profile</a></li>
+                  <li><a href="#" class="navContent">Log out</a></li>
+                  <li><a href="#" class="navContent">My Profile</a></li>
               {% endif %}
           {% if user.is_authenticated and user.is_superuser %}
               <!-- add apartment -->
