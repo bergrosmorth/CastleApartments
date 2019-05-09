@@ -1,15 +1,15 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
 
-class Realtor(models.Model):
-    name = models.CharField(max_length=255)
-    phoneNR = models.IntegerField()
+class Profile(models.Model):
+    phone = models.IntegerField()
     address = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
 
-class RealtorImage(models.Model):
+class ProfileImage(models.Model):
     image = models.CharField(max_length=999)
-    realtor = models.ForeignKey(Realtor, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
