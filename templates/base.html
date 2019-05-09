@@ -30,7 +30,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <form class="navbar-form navbar-left">
-                <a class="navbar-brand" href="{% url 'apartment-index' %}">Castle Apartments</a>
+                <a class="navbar-brand" href="{% url 'apartment-index' %}"><h4>Castle Apartments</h4></a>
                 {% if user.is_authenticated %}
                     <div class="row">
                         <div class="col-lg-6 form-group">
@@ -38,18 +38,18 @@
                                 <input type="text" class="form-control" size="80" placeholder="Search...">
                                 <span class="input-group-btn"><button id="searchbtn" class="btn btn-default" type="button">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
-                            </div><!-- /input-group -->
-                        </div><!-- /.col-lg-6 -->
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
             </form>
             {% if user.is_authenticated and user.is_superuser %}
-                <li><a href="#" class="navContent">Add apartment</a></li>
+                <li><a href="#" class="navContent"><h4>Add apartment</h4></a></li>
             {% endif %}
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}" class="navContent">Log out</a></li>
-                    <li><a href="{% url 'profile-index' %}" class="navContent">My Profile</a></li>
+                    <li><a href="{% url 'logout' %}" class="navContent"><h4>Log out</h4></a></li>
+                    <li><a href="{% url 'profile-index' %}" class="navContent"><h4>My profile</h4></a></li>
                 {% endif %}
             </ul>
         </div><!-- /.navbar-collapse -->
