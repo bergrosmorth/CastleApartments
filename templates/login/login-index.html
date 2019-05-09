@@ -8,8 +8,8 @@
         <form method="post" class="container", id="logincontainer">
         {% csrf_token %}
         {{ form }}
-    <input type="submit" class="btn" value="Login"/>
-        <button class="btn "><a href="{% url 'register' %}">Register</a></button>
+                        <button type="submit" class="btn btn-primary" id="loginbutton">Login</button>
+        <button class="btn btn-warning" id="registerbutton"><a href="{% url 'register' %}"></a>Register</button>
             {% endif %}
     </form>
     </div>
