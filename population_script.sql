@@ -1,29 +1,12 @@
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Björgvin Björgvinsson', 5885522, 'Menntavegur 1', 'bjorgvinb@castleaptm.is');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Gunnar Sigurðursson', 5463130, 'Guðrúnartún 14', 'gunnars@castleaptm.is');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Helga Torfadottir', 5544547, 'Digranesvegur 77', 'helgat@castleaptm.is');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Baldur Baldvinsson', 8989895, 'Langanesvegur 22', 'baldurb@castleaptm.is');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Sigrún Halldórsdóttir', 8446174, 'Birkihvammur 11', 'sigrunh@castleaptm.is');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Nína Björnsdóttir', 6955455, 'Hrauntunga 1', 'ninabjorns@capacent.is');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Sigurður Jakob Gunnarsson', 8999547, 'Hátún 145', 'siggijak@hotmail.com');
-INSERT INTO profile_profile (name, "phoneNR" , address, email) VALUES('Rakel Sigurgeirsdóttir', 8643234, 'Hlíðarvegur 50', 'rakelsigg@gmail.com');
-INSERT INTO profile_profile (name, "phoneNR", address, email) VALUES('Karen Söring', 8983578, 'Víðihvammur 22', 'karensoring@gmail.com');
+INSERT INTO profile_profile (address, phone, user_id) VALUES('Hrauntunga 69', 8989612, 1);
 
-INSERT INTO profile_profileimage(image, realtor_id) VALUES ('https://static1.squarespace.com/static/53a8283de4b00f6c42318d1a/53a828b8e4b057f6687a7837/58b02130db29d65c64131fd9/1487938244007/21+copy.jpg', 1);
-INSERT INTO profile_profileimage(image, realtor_id) VALUES ('https://petapixel.com/assets/uploads/2012/04/famous1_mini.jpg', 2);
-INSERT INTO profile_profileimage(image, realtor_id) VALUES ('https://static1.squarespace.com/static/53a8283de4b00f6c42318d1a/53a828b8e4b057f6687a7837/56ea98eb7da24f3656a4f440/1463470706694/Business+Portrait+.jpg?format=2500w', 3);
-INSERT INTO profile_profileimage(image, realtor_id) VALUES ('http://nadiazheng.com/wp-content/uploads/2017/02/Montreal-corporate-headshot-BFL-group-on-location-white-background-01.jpg', 4);
-INSERT INTO profile_profileimage(image, realtor_id) VALUES ('https://www.neilsonreeves.co.uk/wp-content/uploads/Sparklelab-headshot-portraits-9-495x400.jpg', 5);
-INSERT INTO profile_profileimage(image, customer_id) VALUES ('https://freerangestock.com/sample/114814/a-caucasian-woman-posing-with-a-smile.jpg',6);
-INSERT INTO profile_profileimage(image, customer_id) VALUES ('http://www.cndajin.com/data/wls/138/12956717.jpg',7);
-INSERT INTO profile_profileimage(image, customer_id) VALUES ('https://www.joancanto.com/wp-content/uploads/2017/04/H10B1582-Edit.jpg',8);
-INSERT INTO profile_profileimage(image, customer_id) VALUES ('https://m.cbhomes.com/a/37/200785/n3Lxge7BiRaE/original.jpg',9);
-INSERT INTO profile_profileimage(image, customer_id) VALUES ('https://pmcdeadline2.files.wordpress.com/2014/10/milakunis.png',10);
+INSERT INTO profile_profileimage(image, profile_id) VALUES ('https://static1.squarespace.com/static/53a8283de4b00f6c42318d1a/53a828b8e4b057f6687a7837/58b02130db29d65c64131fd9/1487938244007/21+copy.jpg', 1);
 
-INSERT INTO apartment_apartment (address, city, country, zip, price, type, rooms, bedrooms,bathrooms) VALUES('Kinnargata 3', 'Garðabær', 'Iceland', '210', 110000000, 'house', 5, 4, 3);
-INSERT INTO apartment_apartment (address, city, country, zip, price, type, rooms, bedrooms,bathrooms) VALUES('Kögursel 20', 'Reykjavík', 'Iceland', '109', 57000000, 'house', 4, 2, 1);
-INSERT INTO apartment_apartment (address, city, country, zip, price, type, rooms, bedrooms,bathrooms) VALUES('5943 New England Woods Dr', 'Burke', 'USA', '22015', 120000000, 'house', 6, 4, 3);
-INSERT INTO apartment_apartment (address, city, country, zip, price, type, rooms, bedrooms,bathrooms) VALUES('Skildingarnes 40', 'Reykjavík', 'Iceland', '090152', 99000000, 'house', 5, 4, 2);
-INSERT INTO apartment_apartment (address, city, country, zip, price, type, rooms, bedrooms,bathrooms) VALUES('5431 Vista Grande St', 'West Hollywood', 'USA', '210', 210000000, 'house', 7, 5, 4);
+INSERT INTO apartment_apartment (address, city, country, zip, price, rooms, description, realator_id) VALUES('Kinnargata 3', 'Garðabær', 'Iceland', '210', 110000000, 5, 'Flott hús', 1);
+INSERT INTO apartment_apartment (address, city, country, zip, price, rooms,description, realator_id ) VALUES('Kögursel 20', 'Reykjavík', 'Iceland', '109', 57000000, 4, 'Ljótt hús', 1);
+INSERT INTO apartment_apartment (address, city, country, zip, price, rooms,description, realator_id ) VALUES('5943 New England Woods Dr', 'Burke', 'USA', '22015', 120000000, 6, 'hús', 2);
+INSERT INTO apartment_apartment (address, city, country, zip, price, rooms,description, realator_id) VALUES('Skildingarnes 40', 'Reykjavík', 'Iceland', '090152', 99000000, 5, 'annað hús', 2);
+INSERT INTO apartment_apartment (address, city, country, zip, price,rooms, description, realator_id) VALUES('5431 Vista Grande St', 'West Hollywood', 'USA', '210', 210000000, 7, 'hollywood', 3);
 
 INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://media.treehugger.com/assets/images/2017/12/Villa-S-by-RAU-Architecten-3-1020x610_1.jpg.860x0_q70_crop-scale.jpg',1);
 INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://fashionelly.com/images/2016/Modern-Living-Room-Designs-You-Should-Try-5.jpg',1);
