@@ -16,7 +16,7 @@ html, body {
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-    height: 350px;
+    height: 30em;
     opacity: 0.9;
 }
 
@@ -76,4 +76,19 @@ html, body {
 
 .profileHeader {
     text-align: center;
+}
+
+.infoContainer {
+    margin-left: 10%
+}
+
+#editButton {
+    <!-- ## -->
+}
+
+.icon {
+    background-size: cover;
+    background-position: center;
+    height: 24px;
+
 }
