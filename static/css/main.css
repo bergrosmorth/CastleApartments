@@ -26,6 +26,15 @@ html, body {
     padding: 0;
 }
 
+#loginform {
+    display: flex;
+    flex-flow: column;
+    border: 2px solid black;
+    margin-top: 100px;
+    width: 70%;
+    background-color: grey;
+}
+
 .login {
     margin-top: 15px;
 }
