@@ -3,17 +3,17 @@
 {% block content %}
     <div class="frontpage">
     <div class="container" id="logincontainer">
+                    {% if not user.is_authenticated %}
+
         <form method="post" class="container", id="logincontainer">
         {% csrf_token %}
         {{ form }}
     <input type="submit" class="btn" value="Login"/>
+        <button class="btn "><a href="{% url 'register' %}">Register</a></button>
+            {% endif %}
     </form>
     </div>
-        {% if user.is_authenticated %}
-            <li><a href="{% url 'logout' %}">LogOut</a></li>
-        {% else %}
-            <li><a href="{% url 'register' %}">Register</a></li>
-        {% endif %}
+
     </div>
 {% endblock %}
 
