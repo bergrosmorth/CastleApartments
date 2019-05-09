@@ -5,7 +5,7 @@
     <div class="container" id="logincontainer">
                     {% if not user.is_authenticated %}
 
-        <form method="post" class="container", id="logincontainer">
+        <form method="post" class="container", id="loginform">
         {% csrf_token %}
         {{ form }}
                         <button type="submit" class="btn btn-primary" id="loginbutton">Login</button>
