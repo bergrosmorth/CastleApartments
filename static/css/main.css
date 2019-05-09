@@ -31,7 +31,13 @@ html, body {
     flex-flow: column;
     margin-top: 100px;
     width: 50%;
-
+    background: rgba(130,130,130,.3);
+    padding: 20px 22px;
+    border: 1px solid;
+    border-top-color: rgba(255,255,255,.4);
+    border-left-color: rgba(255,255,255,.4);
+    border-bottom-color: rgba(60,60,60,.4);
+    border-right-color: rgba(60,60,60,.4);
 }
 
 .login {
@@ -114,10 +120,12 @@ html, body {
 }
 
 label[for=id_username] {
-    margin-left: 35%
+    color: whitesmoke;
+    margin-left: 30%
 }
 
 label[for=id_password] {
-    margin-left: 35%
+    color: whitesmoke;
+    margin-left: 30%
 }
 
