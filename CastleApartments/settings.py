@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'customer.apps.CustomerConfig',
-    'realtor.apps.RealtorConfig',
+    'login.apps.LoginConfig',
+    'profile.apps.RealtorConfig',
     'apartment.apps.ApartmentsConfig'
 ]
 
