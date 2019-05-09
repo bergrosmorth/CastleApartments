@@ -15,7 +15,6 @@ html, body {
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-    opacity: 0.9;
     height: 32em;
 }
 
@@ -33,6 +32,7 @@ html, body {
     margin-top: 100px;
     width: 70%;
     background-color: grey;
+
 }
 
 .login {
@@ -103,10 +103,22 @@ html, body {
 }
 
 #loginbutton {
-    margin-left: 60px;
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 25%;
 }
 
 #registerbutton {
-    margin-left: 52px;
+    margin-top: 15px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+label[for=id_username] {
+    margin-left: 30%
+}
+
+label[for=id_password] {
+    margin-left: 30%
 }
 
