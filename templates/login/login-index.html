@@ -9,11 +9,11 @@
         {% csrf_token %}
         {{ form }}
                         <button type="submit" class="btn btn-primary" id="loginbutton">Login</button>
-        <button class="btn btn-warning" id="registerbutton"><a href="{% url 'register' %}"></a>Register</button>
+        <button class="btn btn-warning" id="registerbutton"><a href="{% url 'register' %}">Register</a></button>
             {% endif %}
     </form>
     </div>
-
+    </div>
     </div>
 {% endblock %}
 

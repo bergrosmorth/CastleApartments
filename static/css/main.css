@@ -1,6 +1,6 @@
 *  {
     box-sizing: border-box;
-    font-family: 'Tahoma';
+    font-family: 'arial';
 }
 
 html, body {
@@ -55,12 +55,11 @@ html, body {
     position: relative;
     color: steelblue;
     font-style: bold;
-    margin-top: 0.1em;
 }
 
 .navContent {
-    margin-top: 0.7em;
-    color: steelblue;;
+    margin-top: 0.6em;
+    color: steelblue;
 }
 
 #navbar-animation {
@@ -87,8 +86,11 @@ html, body {
 }
 
 .form-group {
-    margin-top: 0.7em;
+    margin-top: 1em;
 }
+
+
+
 
 .apartmentHeader {
     text-align: center;
@@ -123,13 +125,17 @@ html, body {
 }
 
 label[for=id_username] {
-    color: whitesmoke;
-    margin-left: 30%
+    text-align: center;
 }
 
 label[for=id_password] {
+    text-align: center;
     color: whitesmoke;
-    margin-left: 30%
+}
+
+label[for=id_password] {
+    text-align: center;
+    color: whitesmoke;
 }
 
 .footer {
