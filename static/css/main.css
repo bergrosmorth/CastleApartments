@@ -12,11 +12,14 @@ html, body {
 .frontpage {
     background: url('/static/images/forsidumynd.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-position: center;
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-    height: 450px;
+    height: 350px;
+    opacity: 0.9;
 }
+
 
 #logincontainer {
     justify-content: center;
@@ -32,7 +35,7 @@ html, body {
 }
 .id_password{
     margin-right: 20px;
-}
+
 .btn {
     margin-top: 15px;
 }
