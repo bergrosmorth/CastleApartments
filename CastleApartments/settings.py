@@ -130,5 +130,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "templates/../static")
 ]
 
-LOGIN_URL = '/login'
+LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/apartment'
