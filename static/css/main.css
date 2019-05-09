@@ -114,10 +114,10 @@ html, body {
 }
 
 label[for=id_username] {
-    margin-left: 35%
+    text-align: center;
 }
 
 label[for=id_password] {
-    margin-left: 35%
+    text-align: center;
 }
 
