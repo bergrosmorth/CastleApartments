@@ -29,10 +29,8 @@ html, body {
 #loginform {
     display: flex;
     flex-flow: column;
-    border: 2px solid black;
     margin-top: 100px;
-    width: 70%;
-    background-color: grey;
+    width: 50%;
 
 }
 
@@ -116,10 +114,10 @@ html, body {
 }
 
 label[for=id_username] {
-    margin-left: 30%
+    margin-left: 35%
 }
 
 label[for=id_password] {
-    margin-left: 30%
+    margin-left: 35%
 }
 
