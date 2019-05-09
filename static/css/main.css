@@ -22,3 +22,35 @@ html, body {
     text-align: center;
     width: 30%;
 }
+
+.navbar{
+    border: 0;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-brand {
+    position: relative;
+    color: whitesmoke;
+    text-effect: outline;
+    font-weight: bolder;
+
+}
+
+#navbar-animation {
+    position: absolute;
+    z-index: -6;
+    top: -1000px;
+    bottom: -1000px;
+    right: 0;
+    left: 0;
+    border: 0;
+    background-image: linear-gradient(to right,lightblue, midnightblue);
+    animation: animate-navbar 3s linear infinite alternate;
+}
+
+
+.form-group {
+    margin-top: 0.7em;
+}
