@@ -49,9 +49,8 @@ html, body {
 .navbar-brand {
     position: relative;
     color: steelblue;
-    text-effect: outline;
-    font-weight: bolder;
-    margin-top: 0.2em;
+    font-style: bold;
+    margin-top: 0.1em;
 }
 
 .navContent {
@@ -76,6 +75,10 @@ html, body {
         transform: rotate(0);}
     100% {
         transform: rotateZ(150deg);}
+}
+
+#searchbtn {
+    color: grey;
 }
 
 .form-group {
