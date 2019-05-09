@@ -1,7 +1,7 @@
-.yellow {
-    background-color: lightgoldenrodyellow ;
+*  {
+    box-sizing: border-box;
+    font-family: 'Tahoma';
 }
-
 
 html, body {
     height: 100%;
@@ -16,7 +16,7 @@ html, body {
     margin-right: -15px;
     margin-top: -20px;
     opacity: 0.9;
-    height: 30em;
+    height: 32em;
 }
 
 #logincontainer {
@@ -25,6 +25,7 @@ html, body {
     opacity: 0.5%;
     padding: 0;
 }
+
 #loginform {
     display: flex;
     flex-flow: column;
@@ -34,6 +35,9 @@ html, body {
     background-color: grey;
 }
 
+.login {
+    margin-top: 15px;
+}
 
 .navbar{
     border: 0;
@@ -47,12 +51,12 @@ html, body {
     color: floralwhite;
     text-effect: outline;
     font-weight: bolder;
-
+    margin-top: 0.2em;
 }
 
 .navContent {
     margin-top: 0.7em;
-    color: lightblue;
+    color: midnightblue;;
 }
 
 #navbar-animation {
@@ -63,7 +67,7 @@ html, body {
     right: 0;
     left: 0;
     border: 0;
-    background-image: linear-gradient(to right,#2B59D5, #1A2D62);
+    background-image: linear-gradient(to right, lightsteelblue, royalblue);
     animation: animate-navbar 4s linear infinite alternate;
 }
 
@@ -71,7 +75,7 @@ html, body {
     0% {
         transform: rotate(0);}
     100% {
-        transform: rotateZ(180deg);}
+        transform: rotateZ(150deg);}
 }
 
 .form-group {
@@ -86,13 +90,9 @@ html, body {
     text-align: center;
 }
 
-<<<<<<< HEAD
+
 .infoContainer {
     margin-left: 10%
-}
-
-#editButton {
-    <!-- ## -->
 }
 
 .icon {
@@ -101,7 +101,7 @@ html, body {
     height: 24px;
 
 }
-=======
+
 #loginbutton {
     margin-left: 60px;
 }
@@ -109,4 +109,4 @@ html, body {
 #registerbutton {
     margin-left: 52px;
 }
->>>>>>> a9adc1beb1396b2243ec684ecbc62e0584430b58
+
