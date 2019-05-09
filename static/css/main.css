@@ -12,14 +12,11 @@ html, body {
 .frontpage {
     background: url('/static/images/forsidumynd.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-    height: 350px;
-    opacity: 0.9;
+    height: 450px;
 }
-
 
 #logincontainer {
     justify-content: center;
@@ -28,18 +25,11 @@ html, body {
     opacity: 0.5%;
     border 2px solid black;
     padding: 0;
-    margin-top:
 }
-.id_username{
-    margin-right: 20px;
-}
-.id_password{
-    margin-right: 20px;
 
 .btn {
     margin-top: 15px;
 }
-
 
 .navbar{
     border: 0;
