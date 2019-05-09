@@ -1,0 +1,9 @@
+{% load humanize %}
+
+<div class="apartment">
+    <a href="#">
+        <img class="apartment_img" src="{{apartment.apartmentimage_set.first.image }}"/>
+        <h4> {{ apartment.address }}</h4>
+        <p> {{ apartment.price|intcomma }} kr.</p>
+    </a>
+</div>

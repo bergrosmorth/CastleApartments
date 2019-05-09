@@ -132,3 +132,10 @@ label[for=id_password] {
     margin-left: 30%
 }
 
+.footer {
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  color: steelblue;
+  text-align: left;
+}
