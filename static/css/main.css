@@ -12,15 +12,19 @@ html, body {
 .frontpage {
     background: url('/static/images/forsidumynd.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-position: center;
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
-    height: 450px;
+    height: 350px;
+    opacity: 0.9;
 }
+
 
 #logincontainer {
     text-align: center;
     width: 30%;
+    opacity: 1;
 }
 
 .navbar{
