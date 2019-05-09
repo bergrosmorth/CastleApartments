@@ -19,9 +19,24 @@ html, body {
 }
 
 #logincontainer {
-    text-align: center;
+    justify-content: center;
     width: 30%;
+    background-color: grey;
+    opacity: 0.5%;
+    border 2px solid black;
+    padding: 0;
+    margin-top:
 }
+.id_username{
+    margin-right: 20px;
+}
+.id_password{
+    margin-right: 20px;
+}
+.btn {
+    margin-top: 15px;
+}
+
 
 .navbar{
     border: 0;
