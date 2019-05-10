@@ -2,13 +2,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="apartmentHeader">
+    <!--<div class="apartmentHeader">
         <h3>Apartments for sale:</h3>
         <h6>Newest first</h6>
-    </div>
-    <div class="apartments">
-        {% for apartment in apartments %}
-            {% include 'apartment/single_apartment.html' with apartment=apartment %}
-        {% endfor %}
+    </div>--!>
+    <div class="container">
+        <div class="form-group col-xs-3" id="filter-box">
+            Póstnúmer<br><select></select>
+            <br>Herbergi<br><select></select> Til <select></select>
+            <br>Verð<input type="range" min="1" max="200" value="50" class="slider" id="priceInputID" oninput="priceOutputID.value = priceInputID.value">
+                    <output name="priceOutput" id="priceOutputID"
+        </div>
+            <div class="form-group col-xs-9" id="apartments">
+                {% for apartment in apartments %}
+                    {% include 'apartment/single_apartment.html' with apartment=apartment %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}

@@ -27,7 +27,7 @@ html, body {
     position: absolute;
     background: url('/static/images/forsidumynd.jpg');
     background-size: cover;
-    filter:blur(2.5px);
+    filter:blur(1.5px);
 }
 
 #logincontainer {
@@ -103,8 +103,6 @@ html, body {
 }
 
 
-
-
 .apartmentHeader {
     text-align: center;
 }
@@ -152,15 +150,15 @@ label[for=id_password] {
     bottom: 0;
     width: 100%;
     color: steelblue;
-    text-align: center;
+    text-align: left;
 }
 
-.apartments {
+#apartments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.apartments .apartment {
+#apartments .apartment {
     border-radius: 0;
     margin: 0;
     background-image: none;
@@ -178,7 +176,19 @@ label[for=id_password] {
     transition: transform 1s ease-in;
 }
 
-.apartments .apartment:hover {
+
+
+.apartment-img1 {
+    width: 800px;
+}
+
+.apartment-img2 {
+    width: 150px;
+    margin-top: 15px;
+    margin-left: 11px;
+}
+
+#apartments .apartment:hover {
     background-image: linear-gradient(#C500E2, #9A27F7),
     linear-gradient(#6564FF, #2A96FA),
     linear-gradient(#2FF89F, #68FF6B),
@@ -190,7 +200,7 @@ label[for=id_password] {
     cursor: pointer;
 }
 
-.apartments .apartment:hover .apartment-img {
+#apartments .apartment:hover .apartment-img {
     transform: perspective(400px) scale(1.1) rotateY(15deg);
 }
 
@@ -211,3 +221,9 @@ label[for=id_password] {
         background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
     }
 }
+
+#filter-box {
+    width: 25%;
+    border: 2px solid black;
+}
+
