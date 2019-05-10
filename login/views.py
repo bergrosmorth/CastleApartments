@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+from apartment.models import Apartment
 
 # Create your views here.
 def get_frontPage(request):
@@ -14,6 +15,7 @@ def register(request):
     return render(request, 'login/register.html', {
         'form': UserCreationForm()
     })
+
 
 def index(request):
     context = {'apartments': Apartment.objects.all().order_by('address')}
