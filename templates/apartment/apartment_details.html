@@ -17,11 +17,11 @@
                 <h3>Price: {{ apartment.price | intcomma}} kr.</h3>
                 <h3>Rooms: {{ apartment.rooms }}</h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" id="apartmentdesc">
                 <p>{{ apartment.description }}</p>
             </div>
             <div class="col-md-3">
-                <button class="btn btn-primary" id="kaupabutton">Kaupa fasteign</button>
+                <button class="btn btn-primary" id="kaupabutton">Buy Apartment</button>
             </div>
         </div>
     </div>
@@ -29,7 +29,9 @@
         <div class="row">
             <div class="col-md-6">
                     {% for apartmentimage in apartment.apartmentimage_set.all %}
+                        {% if forloop.counter < 6 %}>
                     <img src="{{ apartmentimage.image }}" class="apartment-img2" id="myndiraffasteign"/>
+                        {% endif %}
                 {% endfor %}
             </div>
             <div class="col-md-6">
@@ -41,9 +43,6 @@
     {% if user.is_authenticated and user.is_superuser %}
                 <li><a href="{% url 'delete_apartment' apartment.id %}" class="navContent"><h4>Delete Apartment</h4></a></li>
     {% endif %}
-    </div>
-    <div class="col-md-1">
-        <p>Hér á að koma upplýsingar um fasteignasala</p>
     </div>
     </div>
     </div>
