@@ -10,13 +10,24 @@ html, body {
 }
 
 .frontpage {
-    background: url('/static/images/forsidumynd.jpg') no-repeat center center fixed;
-    background-size: cover;
     margin-left: -15px;
     margin-right: -15px;
     margin-top: -20px;
     height: 32em;
     opacity: 0.9;
+    position: relative;
+}
+
+.frontpage:before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('/static/images/forsidumynd.jpg');
+    background-size: cover;
+    filter:blur(2.5px);
 }
 
 #logincontainer {
@@ -24,6 +35,7 @@ html, body {
     width: 30%;
     opacity: 0.5%;
     padding: 0;
+    position: relative;
 }
 
 #loginform {
@@ -125,10 +137,6 @@ html, body {
 }
 
 label[for=id_username] {
-    text-align: center;
-}
-
-label[for=id_password] {
     text-align: center;
     color: whitesmoke;
 }
