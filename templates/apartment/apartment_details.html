@@ -18,7 +18,7 @@
                 <h3>Price: {{ apartment.price | intcomma}} kr.</h3>
                 <h3>Rooms: {{ apartment.rooms }}</h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" id="apartmentdesc">
                 <p>{{ apartment.description }}</p>
             </div>
         </div>
@@ -28,7 +28,9 @@
         <div class="row">
             <div class="col-md-6">
                     {% for apartmentimage in apartment.apartmentimage_set.all %}
+                        {% if forloop.counter < 6 %}>
                     <img src="{{ apartmentimage.image }}" class="apartment-img2" id="myndiraffasteign"/>
+                        {% endif %}
                 {% endfor %}
             </div>
             <div class="col-md-6">
@@ -40,7 +42,7 @@
     </div>
         <div class="col-md-3">
                 {% if user.is_authenticated and not user.is_superuser %}
-                    <button class="btn btn-primary" id="kaupabutton">Kaupa fasteign</button>
+                    <button class="btn btn-primary" id="kaupabutton">Buy Apartment</button>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
                     <a href="{% url 'delete_apartment' apartment.id %}" id="delete_apartment">

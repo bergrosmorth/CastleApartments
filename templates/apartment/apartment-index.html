@@ -8,10 +8,12 @@
     </div>-->
     <div class="container">
         <div class="form-group col-xs-3" id="filter-box">
-            Póstnúmer<br><select></select>
-            <br>Herbergi<br><select></select> Til <select></select>
-            <br>Verð<input type="range" min="1" max="200" value="50" class="slider" id="priceInputID" oninput="priceOutputID.value = priceInputID.value">
-                    <output name="priceOutput" id="priceOutputID"
+            Zip Code<br><select></select>
+            <br>Rooms<br><select></select> Til <select></select>
+            <br>Price<input type="range" min="1" max="300" value="50" class="slider" id="priceInputID" oninput="priceOutputID.value = priceInputID.value">
+                    M ISK<output name="priceOutput" id="priceOutputID"></output>
+            <br>Size<input type="range" min="1" max="500" value="100" class="slider" id="sizeInputID" oninput="sizeOutputID.value = sizeInputID.value">
+            m2<output name="sizeOutput" id="sizeOutputID"></output>
         </div>
             <div class="form-group col-xs-9" id="apartments">
                 {% for apartment in apartments %}

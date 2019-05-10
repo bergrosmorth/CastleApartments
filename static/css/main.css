@@ -172,18 +172,18 @@ label[for=id_password] {
 }
 
 .apartment-img {
-    width: 320px;
+    width: 100%;
     transition: transform 1s ease-in;
 }
 
 
 
 .apartment-img1 {
-    width: 800px;
+    width: 100%;
 }
 
 .apartment-img2 {
-    width: 150px;
+    width: 15%;
     margin-top: 15px;
     margin-left: 11px;
 }
@@ -230,4 +230,8 @@ label[for=id_password] {
 #filter-box {
     width: 25%;
     border: 2px solid black;
+}
+
+#apartmentdesc {
+    margin-top: 20px;
 }
