@@ -20,6 +20,13 @@
             </div>
             <div class="col-md-3" id="apartmentdesc">
                 <p>{{ apartment.description }}</p>
+                {% if user.is_authenticated and not user.is_superuser %}
+                    <button class="btn btn-primary" id="kaupabutton">Buy Apartment</button>
+                {% endif %}
+                {% if user.is_authenticated and user.is_superuser %}
+                    <a href="{% url 'delete_apartment' apartment.id %}" id="delete_apartment">
+                    <button class="btn btn-primary"> Delete Apartment </button></a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -40,15 +47,6 @@
     <div class="row">
     <div class="col-md-6">
     </div>
-        <div class="col-md-3">
-                {% if user.is_authenticated and not user.is_superuser %}
-                    <button class="btn btn-primary" id="kaupabutton">Buy Apartment</button>
-                {% endif %}
-                {% if user.is_authenticated and user.is_superuser %}
-                    <a href="{% url 'delete_apartment' apartment.id %}" id="delete_apartment">
-                    <button class="btn btn-primary"> Delete Apartment </button></a>
-                {% endif %}
-            </div>
     <div class="col-md-1">
         <p>Hér á að koma upplýsingar um fasteignasala</p>
     </div>
