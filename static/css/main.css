@@ -83,6 +83,7 @@ html, body {
 
 #searchbtn {
     color: grey;
+    padding: 9px;
 }
 
 .form-group {
@@ -139,12 +140,11 @@ label[for=id_password] {
 }
 
 .footer {
-    margin-left: 100px;
     padding: 10px;
     bottom: 0;
     width: 100%;
     color: steelblue;
-    text-align: left;
+    text-align: center;
 }
 
 .apartments {
@@ -166,7 +166,7 @@ label[for=id_password] {
 }
 
 .apartment-img {
-    width: 200px;
+    width: 320px;
     transition: transform 1s ease-in;
 }
 
@@ -178,7 +178,8 @@ label[for=id_password] {
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
-    animation: circle-around .5s ease-in both;cursor: pointer;
+    animation: circle-around .5s ease-in both;
+    cursor: pointer;
 }
 
 .apartments .apartment:hover .apartment-img {
