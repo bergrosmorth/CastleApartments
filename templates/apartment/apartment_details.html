@@ -36,5 +36,18 @@
                 <p>Realtor: {{ apartment.realator_id }}</p>
             </div>
         </div>
+    <div class="row">
+    <div class="col-md-6">
+        {% for apartmentimage in apartment.apartmentimage_set.all %}
+        <img src="{{ apartmentimage.image }}" class="apartment-img2" id="myndiraffasteign"/>
+    {% endfor %}
+    {% if user.is_authenticated and user.is_superuser %}
+                <li><a href="{% url 'delete_apartment' apartment.id %}" class="navContent"><h4>Delete Apartment</h4></a></li>
+    {% endif %}
+    </div>
+    <div class="col-md-1">
+        <p>Hér á að koma upplýsingar um fasteignasala</p>
+    </div>
+    </div>
     </div>
 {% endblock %}
