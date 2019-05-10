@@ -172,7 +172,7 @@ label[for=id_password] {
 }
 
 .apartment-img {
-    width: 320px;
+    width: 100%;
     transition: transform 1s ease-in;
 }
 
