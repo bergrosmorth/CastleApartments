@@ -221,3 +221,8 @@ label[for=id_password] {
         background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
     }
 }
+
+
+#kaupabutton {
+    margin-top: 400px;
+}
