@@ -178,6 +178,16 @@ label[for=id_password] {
     transition: transform 1s ease-in;
 }
 
+.apartment-img1 {
+    width: 800px;
+}
+
+.apartment-img2 {
+    width: 150px;
+    margin-top: 15px;
+    margin-left: 11px;
+}
+
 .apartments .apartment:hover {
     background-image: linear-gradient(#C500E2, #9A27F7),
     linear-gradient(#6564FF, #2A96FA),
