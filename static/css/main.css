@@ -139,9 +139,66 @@ label[for=id_password] {
 }
 
 .footer {
-  padding: 10px;
-  bottom: 0;
-  width: 100%;
-  color: steelblue;
-  text-align: left;
+    margin-left: 100px;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    color: steelblue;
+    text-align: left;
+}
+
+.apartments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.apartments .apartment {
+    border-radius: 0;
+    margin: 0;
+    background-image: none;
+    background-color: white;
+    text-align: center;
+}
+
+.apartment a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.apartment-img {
+    width: 200px;
+    transition: transform 1s ease-in;
+}
+
+.apartments .apartment:hover {
+    background-image: linear-gradient(#C500E2, #9A27F7),
+    linear-gradient(#6564FF, #2A96FA),
+    linear-gradient(#2FF89F, #68FF6B),
+    linear-gradient(#F82D97, #E82FCE);
+    background-repeat: no-repeat;
+    background-position: left top, right top, right bottom, left bottom;
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+    animation: circle-around .5s ease-in both;cursor: pointer;
+}
+
+.apartments .apartment:hover .apartment-img {
+    transform: perspective(400px) scale(1.1) rotateY(15deg);
+}
+
+@keyframes circle-around {
+    0% {
+        background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+    }
+    25% {
+        background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+    }
+    50% {
+        background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+    }
+    75% {
+        background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+    }
+    100% {
+        background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    }
 }
