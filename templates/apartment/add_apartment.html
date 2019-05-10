@@ -3,6 +3,6 @@
     <form class="form form-horizontal" action="{% url 'add_apartment' %}" method="post">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Add" class="btn" style="clear: both; margin: 10px 0" />
+        <input type="submit" value="Add Apartment" class="btn btn-primary" style="clear: both; margin: 10px 0" />
     </form>
 {% endblock %}
