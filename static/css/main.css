@@ -27,7 +27,7 @@ html, body {
     position: absolute;
     background: url('/static/images/forsidumynd.jpg');
     background-size: cover;
-    filter:blur(2.5px);
+    filter:blur(1.5px);
 }
 
 #logincontainer {
