@@ -11,7 +11,7 @@
             Póstnúmer<br><select></select>
             <br>Herbergi<br><select></select> Til <select></select>
             <br>Verð<input type="range" min="1" max="200" value="50" class="slider" id="priceInputID" oninput="priceOutputID.value = priceInputID.value">
-                    <output name="priceOutput" id="priceOutputID"
+                    <output name="priceOutput" id="priceOutputID"></output>
         </div>
             <div class="form-group col-xs-9" id="apartments">
                 {% for apartment in apartments %}
