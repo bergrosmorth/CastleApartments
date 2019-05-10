@@ -2,11 +2,11 @@ INSERT INTO profile_profile (address, phone, user_id) VALUES('Hrauntunga 69', 89
 
 INSERT INTO profile_profileimage(image, profile_id) VALUES ('https://static1.squarespace.com/static/53a8283de4b00f6c42318d1a/53a828b8e4b057f6687a7837/58b02130db29d65c64131fd9/1487938244007/21+copy.jpg', 1);
 
-INSERT INTO apartment_apartment (address, city, country_id, zip, price, rooms, description, realator_id) VALUES('Kinnargata 3', 'Garðabær', 93, '210', 110000000, 5, 'Flott hús', 1);
-INSERT INTO apartment_apartment (address, city, country_id, zip, price, rooms,description, realator_id ) VALUES('Kögursel 20', 'Reykjavík', 93, '109', 57000000, 4, 'Ljótt hús', 1);
-INSERT INTO apartment_apartment (address, city, country_id, zip, price, rooms,description, realator_id ) VALUES('5943 New England Woods Dr', 'Burke', 193, '22015', 120000000, 6, 'hús', 2);
-INSERT INTO apartment_apartment (address, city, country_id, zip, price, rooms,description, realator_id) VALUES('Skildingarnes 40', 'Reykjavík', 93, '090152', 99000000, 5, 'annað hús', 2);
-INSERT INTO apartment_apartment (address, city, country_id, zip, price,rooms, description, realator_id) VALUES('5431 Vista Grande St', 'West Hollywood', 193, '210', 210000000, 7, 'hollywood', 3);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms, description, realator_id) VALUES('Kinnargata 3', 'Garðabær', 93, '210', 90.9, 110000000, 5, 'Flott hús', 1);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id ) VALUES('Kögursel 20', 'Reykjavík', 93, '109', 78.5, 57000000, 4, 'Ljótt hús', 1);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id ) VALUES('5943 New England Woods Dr', 'Burke', 193, '22015', 100, 120000000, 6, 'hús', 2);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id) VALUES('Skildingarnes 40', 'Reykjavík', 93, '090152', 64.3, 99000000, 5, 'annað hús', 2);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price,rooms, description, realator_id) VALUES('5431 Vista Grande St', 'West Hollywood', 193, 59.64,'210', 210000000, 7, 'hollywood', 3);
 
 INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://media.treehugger.com/assets/images/2017/12/Villa-S-by-RAU-Architecten-3-1020x610_1.jpg.860x0_q70_crop-scale.jpg',1);
 INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://fashionelly.com/images/2016/Modern-Living-Room-Designs-You-Should-Try-5.jpg',1);
