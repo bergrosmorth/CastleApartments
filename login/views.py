@@ -14,3 +14,7 @@ def register(request):
     return render(request, 'login/register.html', {
         'form': UserCreationForm()
     })
+
+def index(request):
+    context = {'apartments': Apartment.objects.all().order_by('address')}
+    return render(request, 'apartment/apartment-index.html', context)

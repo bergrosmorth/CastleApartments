@@ -19,6 +19,15 @@
         </form>
         </div>
     </div>
+    <div class="apartmentHeader">
+        <h3>Apartments for sale:</h3>
+        <h6>Newest first</h6>
+    </div>
+    <div class="apartments">
+        {% for apartment in apartments %}
+            {% include 'apartment/single_apartment.html' with apartment=apartment %}
+        {% endfor %}
+    </div>
 {% endblock %}
 
 
