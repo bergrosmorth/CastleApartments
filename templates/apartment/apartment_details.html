@@ -12,4 +12,7 @@
     {% for apartmentimage in apartment.apartmentimage_set.all %}
         <img src="{{ apartmentimage.image }}" class="apartment-img"/>
     {% endfor %}
+    {% if user.is_authenticated and user.is_superuser %}
+                <li><a href="{% url 'delete_apartment' apartment.id %}" class="navContent"><h4>Delete Apartment</h4></a></li>
+    {% endif %}
 {% endblock %}

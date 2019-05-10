@@ -44,8 +44,9 @@
                 {% endif %}
             </form>
             {% if user.is_authenticated and user.is_superuser %}
-                <li><a href="#" class="navContent"><h4>Add apartment</h4></a></li>
+                <li><a href="{% url 'add_apartment' %}" class="navContent"><h4>Add apartment</h4></a></li>
             {% endif %}
+
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}" class="navContent"><h4>Log out</h4></a></li>
