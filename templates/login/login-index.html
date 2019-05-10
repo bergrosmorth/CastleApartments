@@ -13,8 +13,8 @@
             <form method="post" class="container", id="loginform">
             {% csrf_token %}
             {{ form }}
-                            <button type="submit" class="btn btn-primary" id="loginbutton">Login</button>
-            <button class="btn btn-warning" id="registerbutton"><a href="{% url 'register' %}">Register</a></button>
+                            <button type="submit" class="btn btn-outline primary" id="loginbutton">Login</button>
+            <button class="btn btn-outline primary" id="registerbutton"><a href="{% url 'register' %}">Register</a></button>
                 {% endif %}
         </form>
         </div>
