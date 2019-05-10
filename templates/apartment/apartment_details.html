@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content %}
+
+    <h1> {{ apartment.address }} | {{ apartment.zip }} {{ apartment.city }}</h1>
+    <h3>Country: {{ apartment.country }}</h3>
+    <h3>Price: {{ apartment.price | intcomma}} kr.</h3>
+    <h3>Rooms: {{ apartment.rooms }}</h3>
+    <p>{{ apartment.description }}</p>
+    <p>Realator: {{ apartment.realator_id }}</p>
+    {% for apartmentimage in apartment.apartmentimage_set.all %}
+        <img src="{{ apartmentimage.image }}" class="apartment-img"/>
+    {% endfor %}
+{% endblock %}
