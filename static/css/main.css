@@ -179,11 +179,11 @@ label[for=id_password] {
 
 
 .apartment-img1 {
-    width: 800px;
+    width: 100%;
 }
 
 .apartment-img2 {
-    width: 150px;
+    width: 15%;
     margin-top: 15px;
     margin-left: 11px;
 }
