@@ -226,7 +226,12 @@ label[for=id_password] {
 #kaupabutton {
     margin-top: 400px;
 }
+
 #filter-box {
     width: 25%;
     border: 2px solid black;
+}
+
+#apartmentdesc {
+    margin-top: 20px;
 }

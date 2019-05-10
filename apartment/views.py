@@ -14,10 +14,12 @@ def get_apartment_by_id(request, id):
     })
 
 def add_apartment(request):
-    if request.method == 'Post':
+    if request.method == 'POST':
         form = ApartmentAddForm(data=request.POST)
         if form.is_valid():
-            apartment = form.save()
+            apartment = form.save(commit=False)
+            apartment.realator = request.user
+            apartment.save()
             apartment_image = ApartmentImage(image=request.POST['image'], apartment=apartment)
             apartment_image.save()
             return redirect('apartment-index')
@@ -26,7 +28,7 @@ def add_apartment(request):
     return render(request, 'apartment/add_apartment.html', {
         'form': form
     })
-    # form.realator = request.users
+
 
 def delete_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
