@@ -35,5 +35,6 @@ def delete_apartment(request, id):
     return redirect('apartment-index')
 
 def buy_apartment(request, id):
-    apartment = get_object_or_404(Apartment, pk=id)
-    return redirect('buy_apartment')
+    return render( request, 'apartment/buy_apartment.html', {
+        'apartment': get_object_or_404( Apartment, pk=id )
+    } )
