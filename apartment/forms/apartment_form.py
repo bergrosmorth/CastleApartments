@@ -19,7 +19,6 @@ class ApartmentAddForm(ModelForm):
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
         }
 
-<<<<<<< HEAD
 class BuyApartmentForm(ModelForm):
     class Meta:
         model = Apartment
@@ -33,7 +32,7 @@ class BuyApartmentForm(ModelForm):
             'card number': widgets.NumberInput(attrs={'class': 'form-control'}),
             'expiration date': widgets.NumberInput(attrs={'class': 'form-control'}),
             'CVC': widgets.TextInput(attrs={'class': 'form-control'}),
-=======
+
 class ApartmentUpdateForm(ModelForm):
     class Meta:
         model = Apartment
@@ -47,5 +46,3 @@ class ApartmentUpdateForm(ModelForm):
             'price': widgets.NumberInput( attrs={'class': 'form-control'} ),
             'rooms': widgets.NumberInput( attrs={'class': 'form-control'} ),
             'description': widgets.TextInput( attrs={'class': 'form-control'} ),
->>>>>>> 2dcf5707027fbec23cdb50e208103f1a831ca8c1
-        }
