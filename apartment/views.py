@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
-from apartment.forms.apartment_form import ApartmentAddForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyProfile
 from django.http import JsonResponse
 
 
@@ -39,19 +39,31 @@ def add_apartment(request):
         'form': form
     })
 
-
 def delete_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
     apartment.delete()
     return redirect('apartment-index')
 
+def buy_apartment(request, id):
+    house = Apartment.objects.get(pk=id)
+    form = BuyApartmentForm(instance=house)
+    if request.POST:
+        print(request.POST['SSN'])
+    return render(request, 'apartment/buy_apartment.html', {
+        'form': form,
+        'apartment': get_object_or_404(Apartment, pk=id)
+    })
 
-
-#        search_filter = request.GET['search_filter']
-#    apartments = [{
-#        'id': x.id,
-#        'firstImage': x.apartmentimage_set.first().image,
-#        'address': x.address,
-#        'price': x.price,
-#    } for x in Apartment.objects.filter(address__icontains=search_filter)]
-#    return JsonResponse({'data': apartments})
+def update_apartment(request, id):
+    instance = get_object_or_404(Apartment, pk=id)
+    if request.method == "POST":
+        form = ApartmentUpdateForm(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('apartment_details', id=id)
+    else:
+        form = ApartmentUpdateForm(instance=instance)
+    return render(request, 'apartment/update_apartment.html', {
+        'form': form,
+        'id': id
+    })

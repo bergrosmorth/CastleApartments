@@ -1,0 +1,37 @@
+<title>Buyer info</title>
+{% extends "base.html" %}
+{% block content %}
+    <form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <p><b>SSN:</b><br><input type="number" placeholder="SSN" name="SSN"></p>
+        <p><b>Card Informations!</b></p>
+        <input type="number" placeholder="Card Number" name="cardnumber">
+        <input type="number" placeholder="CVC" name="cvc">
+        <p><b>Expiration Date:</b></p>
+        <select name='expireMM' id='expireMM'>
+            <option value=''>Month</option>
+            <option value='01'>January</option>
+            <option value='02'>February</option>
+            <option value='03'>March</option>
+            <option value='04'>April</option>
+            <option value='05'>May</option>
+            <option value='06'>June</option>
+            <option value='07'>July</option>
+            <option value='08'>August</option>
+            <option value='09'>September</option>
+            <option value='10'>October</option>
+            <option value='11'>November</option>
+            <option value='12'>December</option>
+        </select>
+        <select name='expireYY' id='expireYY'>
+            <option value=''>Year</option>
+            <option value='10'>2010</option>
+            <option value='11'>2011</option>
+            <option value='12'>2012</option>
+        </select>
+        <br>
+        <input type="submit" value="Review" class="btn btn-primary" style="clear: both; margin: 10px 0" />
+    </form>
+
+{% endblock %}
