@@ -29,11 +29,11 @@ def add_apartment(request):
         'form': form
     })
 
-
 def delete_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
     apartment.delete()
     return redirect('apartment-index')
 
-
-
+def buy_apartment(request, id):
+    apartment = get_object_or_404(Apartment, pk=id)
+    return redirect('buy_apartment')
