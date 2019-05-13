@@ -1,4 +1,9 @@
-{% extends 'base.html' %}
+<title>Buyer info</title>
+{% extends "base.html" %}
 {% block content %}
-    <p>buy!</p>
+    <form class="form form-horizontal" action="{% url 'buy_apartment' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Buy Apartment" class="btn btn-primary" style="clear: both; margin: 10px 0" />
+    </form>
 {% endblock %}
