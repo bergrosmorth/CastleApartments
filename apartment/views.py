@@ -1,10 +1,20 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyProfile
+from django.http import JsonResponse
 
 
 def index(request):
-    context = {'apartments': Apartment.objects.all().order_by('-id')}  # -id means order by reversed order
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        apartmentos = [{
+            'id': x.id,
+            'firstimage': x.apartmentimage_set.first().image,
+            'address': x.address,
+            'price': x.price
+        } for x in Apartment.objects.filter(address__icontains=search_filter)]
+        return JsonResponse({'data': apartmentos})
+    context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)
 
 # /apartment/1
@@ -39,6 +49,8 @@ def buy_apartment(request, id):
     form = BuyApartmentForm(instance=house)
     if request.POST:
         print(request.POST['SSN'])
+        print(request.POST['address'])
+        return render(request, 'apartment/review_buyer.html')
     return render(request, 'apartment/buy_apartment.html', {
         'form': form,
         'apartment': get_object_or_404(Apartment, pk=id)
@@ -57,3 +69,4 @@ def update_apartment(request, id):
         'form': form,
         'id': id
     })
+

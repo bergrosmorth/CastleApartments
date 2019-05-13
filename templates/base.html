@@ -35,8 +35,8 @@
                     <div class="row">
                         <div class="col-lg-6 form-group">
                             <div class="input-group">
-                                <input type="text" class="form-control" size="80" placeholder="Search...">
-                                <span class="input-group-btn"><button id="searchbtn" class="btn btn-default" type="button">
+                                <input type="text" class="form-control" id="searchbox" size="80" placeholder="Search...">
+                                <span class="input-group-btn"><button id="searchbtn" class="btn btn-default" type="button" onclick="search()">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></span>
                             </div>
                         </div>
@@ -68,5 +68,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="/static/js/script.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script src={% static "js/script.js" %}></script>
 </body>
 </html>
