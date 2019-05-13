@@ -23,7 +23,7 @@
             <div class="col-md-2" id="apartmentdesc">
                 <p id="desctexti">{{ apartment.description }}</p>
                 {% if user.is_authenticated and not user.is_superuser %}
-                    <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment"></a>
+                    <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
                     <button class="btn btn-primary" id="buybutton">Buy Apartment</button>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
