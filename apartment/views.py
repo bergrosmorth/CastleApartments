@@ -4,7 +4,7 @@ from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
 
 
 def index(request):
-    context = {'apartments': Apartment.objects.all().order_by('address')}
+    context = {'apartments': Apartment.objects.all().order_by('-id')}  # -id means order by reversed order
     return render(request, 'apartment/apartment-index.html', context)
 
 # /apartment/1
