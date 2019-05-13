@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyProfile
 
 
 def index(request):
@@ -35,8 +35,13 @@ def delete_apartment(request, id):
     return redirect('apartment-index')
 
 def buy_apartment(request, id):
-    return render( request, 'apartment/buy_apartment.html', {
-        'apartment': get_object_or_404( Apartment, pk=id )
+    house = Apartment.objects.get(pk=id)
+    form = BuyApartmentForm(instance=house)
+    if request.POST:
+        print(request.POST['SSN'])
+    return render(request, 'apartment/buy_apartment.html', {
+        'form': form,
+        'apartment': get_object_or_404(Apartment, pk=id)
     })
 
 def update_apartment(request, id):
