@@ -1,9 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
 from apartment.forms.apartment_form import ApartmentAddForm
+from django.http import JsonResponse
 
 
 def index(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        apartmentos = [{
+            'id': x.id,
+            'firstimage': x.apartmentimage_set.first().image,
+            'address': x.address,
+            'price': x.price
+        } for x in Apartment.objects.filter(address__icontains=search_filter)]
+        return JsonResponse({'data': apartmentos})
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)
 
@@ -37,3 +47,11 @@ def delete_apartment(request, id):
 
 
 
+#        search_filter = request.GET['search_filter']
+#    apartments = [{
+#        'id': x.id,
+#        'firstImage': x.apartmentimage_set.first().image,
+#        'address': x.address,
+#        'price': x.price,
+#    } for x in Apartment.objects.filter(address__icontains=search_filter)]
+#    return JsonResponse({'data': apartments})
