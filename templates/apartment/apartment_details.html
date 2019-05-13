@@ -25,6 +25,7 @@
                 {% if user.is_authenticated and not user.is_superuser %}
                     <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
                     <button class="btn btn-primary" id="buybutton">Buy Apartment</button>
+                    </a>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
                     <a href="{% url 'delete_apartment' apartment.id %}" class="block btn btn-primary">Delete Apartment</a>
