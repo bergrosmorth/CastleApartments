@@ -26,8 +26,9 @@
                     <button class="btn btn-primary" id="buybutton">Buy Apartment</button>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
-                    <a href="{% url 'delete_apartment' apartment.id %}" id="delete_apartment">
-                    <button class="btn btn-primary">Delete Apartment</button></a>
+                    <a href="{% url 'delete_apartment' apartment.id %}" class="block btn btn-primary">Delete Apartment</a>
+                    <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update Apartment</a>
+
                 {% endif %}
             </div>
         </div>

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
-from apartment.forms.apartment_form import ApartmentAddForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
 
 
 def index(request):
@@ -37,4 +37,18 @@ def delete_apartment(request, id):
 def buy_apartment(request, id):
     return render( request, 'apartment/buy_apartment.html', {
         'apartment': get_object_or_404( Apartment, pk=id )
-    } )
+    })
+
+def update_apartment(request, id):
+    instance = get_object_or_404(Apartment, pk=id)
+    if request.method == "POST":
+        form = ApartmentUpdateForm(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('apartment_details', id=id)
+    else:
+        form = ApartmentUpdateForm(instance=instance)
+    return render(request, 'apartment/update_apartment.html', {
+        'form': form,
+        'id': id
+    })
