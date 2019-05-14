@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<<<<<<< HEAD
     <h2>Are these informations correct? </h2>
-
+    <a href="{% url 'payment_success' %}" id="payment_success">
     <input type="submit" value="Yes, correct" id="correctButton" class="btn btn-primary" />
+    </a>
+    <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
     <input type="submit" value="No incorrect, go back" id="incorrectButton" class="btn btn-primary" />
-=======
+    </a>
 <form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
         {% csrf_token %}
         {{ form }}
 
 </form>
->>>>>>> 6fd222d9714e03ea1fd7a842b90fc73283069ddc
 
 {% endblock %}

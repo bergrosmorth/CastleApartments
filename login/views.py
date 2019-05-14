@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from apartment.models import Apartment
+from profile.models import Profile
+from django.contrib.auth import authenticate
 
 
 # Create your views here.
@@ -14,6 +16,10 @@ def register(request):
         form = UserCreationForm(data=request.POST)
         if form.is_valid():
             form.save()
+            username = form.cleaned_data.get('username')
+            passwr = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=passwr)
+            Profile(phone=0, user=user).save()
             return redirect('login')
     return render(request, 'login/register.html', {
         'form': UserCreationForm()
