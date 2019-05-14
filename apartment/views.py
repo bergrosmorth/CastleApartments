@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyProfile
 from django.http import JsonResponse
-
+from django.core.files.storage import FileSystemStorage
 
 def index(request):
     if 'search_filter' in request.GET:
@@ -30,8 +30,22 @@ def add_apartment(request):
             apartment = form.save(commit=False)
             apartment.realator = request.user
             apartment.save()
-            apartment_image = ApartmentImage(image=request.POST['image'], apartment=apartment)
-            apartment_image.save()
+            apartmentImage = ApartmentImage()
+            myfile = request.FILES['myfile']
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            apartmentImage.image = fs.url(filename)
+            apartmentImage.apartment = apartment
+            apartmentImage.save()
+            '''
+            fs = FileSystemStorage()
+            for key in request.FILES.keys():
+                for formfile in request.FILES.getlist(key):
+                    house_image = ApartmentImage()
+                    filename = fs.save(formfile.name, formfile)
+                    house_image.image = fs.url(filename)
+                    house_image.apartment = apartment
+                    house_image.save()'''
             return redirect('apartment-index')
     else:
         form = ApartmentAddForm()
@@ -69,7 +83,6 @@ def update_apartment(request, id):
     return render(request, 'apartment/update_apartment.html', {
         'form': form,
         'id': id
-    })
 
 
 def payment_success(request):
