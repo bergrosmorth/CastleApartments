@@ -83,6 +83,7 @@ def update_apartment(request, id):
     return render(request, 'apartment/update_apartment.html', {
         'form': form,
         'id': id
+    })
 
 
 def payment_success(request):
