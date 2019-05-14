@@ -77,12 +77,8 @@ def update_apartment(request, id):
         form = ApartmentUpdateForm(instance=instance)
     return render(request, 'apartment/update_apartment.html', {
         'form': form,
-<<<<<<< HEAD
         'id': id})
-=======
-        'id': id
-    })
->>>>>>> 4008f82defcc2707c2f3540ef74609b93474871e
+
 
 
 def payment_success(request):
