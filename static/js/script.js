@@ -4,7 +4,7 @@ function changeprice() {
     output.innerHTML = slider.value;
     slider.onchange = function () {
         output.innerHTML = this.value;
-        let millions = this.value*1000000
+        let millions = this.value * 1000000
         jQuery.ajax({
             url: '/apartment/?price_filter=' + millions,
             type: 'GET',
@@ -27,15 +27,36 @@ function changeprice() {
             }
         });
     };
+}
 
 function changesize() {
     var slider = document.getElementById("sizeInputID");
     var output = document.getElementById("sizeOutputID");
     output.innerHTML = slider.value;
-    slider.oninput = function () {
+    slider.onchange = function () {
         output.innerHTML = this.value;
-    };
-}
+        jQuery.ajax({
+            url: '/apartment/?size_filter=' + this.value,
+            type: 'GET',
+            success: function (resp) {
+                var newHTML = resp.data.map(d => {
+                    return ` <div class="apartment">
+                            <a href="/apartment/$(d.id)">
+                                <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
+                                <h4> ${d.address}</h4>
+                                <p> ${d.price}kr.</p>
+                            </a>
+                        </div>`
+                });
+                console.log(newHTML);
+                $('#apartments').html(newHTML.join(''));
+                $('#searchbox').val('')
+            },
+            error: function (xhr, status, error) {
+                console.error(error)
+                }
+            });
+        };
 
 
 jQuery(document).ready(function () {

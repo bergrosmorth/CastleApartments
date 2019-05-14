@@ -24,6 +24,16 @@ def index(request):
             'price': x.price
         } for x in Apartment.objects.filter(price__range=(0, price_filter))]
         return JsonResponse({'data': apartmentos})
+
+    elif 'size_filter' in request.GET:
+        size_filter = request.GET['size_filter']
+        apartmentos = [{
+            'id': x.id,
+            'firstimage': x.apartmentimage_set.first().image,
+            'address': x.address,
+            'price': x.price
+        } for x in Apartment.objects.filter(size__range=(0, size_filter))]
+        return JsonResponse({'data': apartmentos})
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)
 
