@@ -43,12 +43,12 @@ class ApartmentUpdateForm(ModelForm):
         model = Apartment
         exclude = ['id', 'realator']
         widgets = {
-            'address': widgets.TextInput( attrs={'class': 'form-control'} ),
-            'zip': widgets.TextInput( attrs={'class': 'form-control'} ),
-            'city': widgets.TextInput( attrs={'class': 'form-control'} ),
-            'country': widgets.Select( attrs={'class': 'form-control'} ),
-            'size': widgets.NumberInput( attrs={'class': 'form-control'} ),
-            'price': widgets.NumberInput( attrs={'class': 'form-control'} ),
-            'rooms': widgets.NumberInput( attrs={'class': 'form-control'} ),
-            'description': widgets.TextInput( attrs={'class': 'form-control'}),
+            'address': widgets.TextInput(attrs={'class': 'form-control'} ),
+            'zip': widgets.TextInput(attrs={'class': 'form-control'} ),
+            'city': widgets.TextInput(attrs={'class': 'form-control'} ),
+            'country': widgets.Select(attrs={'class': 'form-control'} ),
+            'size': widgets.NumberInput(attrs={'class': 'form-control'} ),
+            'price': widgets.NumberInput(attrs={'class': 'form-control'} ),
+            'rooms': widgets.NumberInput(attrs={'class': 'form-control'} ),
+            'description': widgets.TextInput(attrs={'class': 'form-control'}),
         }

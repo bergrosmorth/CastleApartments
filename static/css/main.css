@@ -101,12 +101,12 @@ html, body {
         transform: rotateZ(150deg);}
 }
 
-apartment a {
-    transition: transform 0.5s;
+.apartment a {
+    transition: transform 0.05s;
 }
 
-apartment a:hover {
-    transform: scale(0.95);
+.apartment img:hover {
+    transform: scale(1.1);
 }
 
 #searchbtn {
@@ -217,4 +217,10 @@ label[for=id_password] {
   max-width: 300px;
   margin: auto;
   text-align: center;
+}
+
+#nextButton {
+    background-color: green !important;
+    border-color: green;
+    margin-top: 2em;
 }
