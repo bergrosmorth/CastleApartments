@@ -4,8 +4,9 @@ function changeprice() {
     output.innerHTML = slider.value;
     slider.onchange = function () {
         output.innerHTML = this.value;
+        let millions = this.value*1000000
         jQuery.ajax({
-            url: '/apartment/?price_filter=' + this.value,
+            url: '/apartment/?price_filter=' + millions,
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {

@@ -17,7 +17,6 @@ def index(request):
 
     elif 'price_filter' in request.GET:
         price_filter = request.GET['price_filter']
-        print(price_filter)
         apartmentos = [{
             'id': x.id,
             'firstimage': x.apartmentimage_set.first().image,
