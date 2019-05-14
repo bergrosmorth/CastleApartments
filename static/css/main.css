@@ -227,4 +227,28 @@ label[for=id_password] {
 
 #paymentText {
     text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#paymentsuccess {
+    border: 2px solid black;
+}
+
+
+label[for=id_phone] {
+    width: 100%;
+}
+
+label[for=id_address] {
+    width: 100%;
+}
+
+label[for=id_email] {
+    width: 100%;
+}
+
+label[for=id_favorite_apartments] {
+    width: 100%;
+
 }
