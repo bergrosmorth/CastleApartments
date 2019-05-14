@@ -8,8 +8,19 @@
     </div>-->
     <div class="container">
         <div class="form-group col-xs-3" id="filter-box">
-            Zip Code<br><select id="zip"></select>
-            <br>Rooms<br><select></select> To <select></select>
+            Zip Code<br><select id="zip"> <option>101</option> </select>
+            <br>Rooms<br><select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+            To <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
             <br>Price<input type="range" min="1" max="300" value="50" class="slider" id="priceInputID" oninput=changeprice()>
             <p><span id="priceOutputID"></span> M ISK</p>
             <br>Size<input type="range" min="1" max="500" value="100" class="slider" id="sizeInputID" oninput=changesize()>
