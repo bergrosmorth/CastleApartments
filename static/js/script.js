@@ -87,6 +87,36 @@ jQuery(document).ready(function () {
     });
 });
 
+jQuery(document).ready(function () {
+    $('#zip').on('change', function(e) {
+        e.preventDefault();
+        let zip = $('#zip').val();
+        let zipint = parseInt(zip)
+        jQuery.ajax({
+            url: '/apartment/?zip_filter=' + zipint,
+            type: 'GET',
+            success: function (resp) {
+                var newHTML = resp.data.map(d => {
+                    return ` <div class="apartment">
+                            <a href="/apartment/$(d.id)">
+                                <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
+                                <h4> ${d.address}</h4>
+                                <p> ${d.price}kr.</p>
+                            </a>
+                        </div>`
+                });
+                console.log(newHTML);
+                $('#apartments').html(newHTML.join(''));
+                $('#searchbox').val('')
+            },
+            error: function (xhr, status, error) {
+                console.error(error)
+            }
+        });
+    });
+});
+
+
 
 jQuery(document).ready(function () {
     $('#searchbtn').on('click', function (e) {
