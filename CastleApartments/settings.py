@@ -55,6 +55,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'CastleApartments.urls'
 
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -133,3 +137,4 @@ STATICFILES_DIRS = [
 
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/apartment'
+

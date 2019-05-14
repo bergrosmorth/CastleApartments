@@ -29,4 +29,11 @@ class ApartmentImage(models.Model):
     def __str__(self):
         return self.image
 
+class UploadImages(models.Model):
+    image = models.ImageField(upload_to='pro_img', blank=True)
+
+    def __str__(self):
+        return str(self.image) #str(image) ?
+
+
 

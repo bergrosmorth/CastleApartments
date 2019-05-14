@@ -48,9 +48,10 @@ def buy_apartment(request, id):
     house = Apartment.objects.get(pk=id)
     form = BuyApartmentForm(instance=house)
     if request.POST:
-        print(request.POST['SSN'])
-        print(request.POST['address'])
-        return render(request, 'apartment/review_buyer.html')
+        return render(request, 'apartment/review_buyer.html',{
+            'form': form,
+            'apartment': get_object_or_404(Apartment, pk=id)
+                      })
     return render(request, 'apartment/buy_apartment.html', {
         'form': form,
         'apartment': get_object_or_404(Apartment, pk=id)
@@ -70,3 +71,6 @@ def update_apartment(request, id):
         'id': id
     })
 
+
+def payment_success(request):
+    return render(request, 'apartment/payment_success.html')

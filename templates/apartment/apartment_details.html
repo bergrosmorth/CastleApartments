@@ -25,12 +25,12 @@
                 {% if user.is_authenticated and not user.is_superuser %}
                     <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
                     <button class="btn btn-primary" id="buybutton">Buy Apartment</button>
+                    <!-- kannski bæta við make offer -->
                     </a>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
                     <a href="{% url 'delete_apartment' apartment.id %}" class="block btn btn-primary">Delete Apartment</a>
                     <a href="{% url 'update_apartment' apartment.id %}" class="block btn btn-primary">Update Apartment</a>
-
                 {% endif %}
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="col-md-6">
                     {% for apartmentimage in apartment.apartmentimage_set.all %}
                         {% if forloop.counter < 6 %}
-                    <img src="{{ apartmentimage.image }}" class="apartment-img2" id="myndiraffasteign"/>
+                    <img src="{{ apartmentimage.image }}" class="apartment-img2" id="ApartmentPhotos"/>
                         {% endif %}
                 {% endfor %}
             </div>
