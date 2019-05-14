@@ -19,7 +19,7 @@ def index(request):
         price_filter = request.GET['price_filter']
         apartmentos = [{
             'id': x.id,
-            'firstimage': x.apartmentimage_set.first().image,
+            #'firstimage': x.apartmentimage_set.first().image,
             'address': x.address,
             'price': x.price
         } for x in Apartment.objects.filter(price__range=(0, price_filter))]
