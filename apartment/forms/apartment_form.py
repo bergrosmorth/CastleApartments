@@ -4,8 +4,8 @@ from apartment.models import Apartment
 from profile.models import Profile
 
 class ApartmentAddForm(ModelForm):
-    image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    # image = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True, 'class': 'form-control'})), fá margar myndir virkar ekki
+    #image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    image = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True, 'class': 'form-control'})) #fá margar myndir virkar ekki
     class Meta:
         model = Apartment
         exclude = [ 'id', 'realator']

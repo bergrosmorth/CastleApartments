@@ -133,3 +133,4 @@ STATICFILES_DIRS = [
 
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/apartment'
+
