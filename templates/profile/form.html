@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{%  block content %}
+    {% for form in forms %}
+        {{ form }}
+        {{ form.label_tag }}
+    {% endfor %}
+{% endblock %}

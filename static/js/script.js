@@ -5,7 +5,7 @@ function changeprice() {
     slider.oninput = function (){
         output.innerHTML = this.value;
     };
-};
+}
 
 function changesize() {
     var slider = document.getElementById("sizeInputID");
@@ -14,14 +14,10 @@ function changesize() {
     slider.oninput = function (){
         output.innerHTML = this.value;
     };
-};
+}
 
-function search() {
-    var searchbutton = document.getElementById('searchbtn')
-
-    //$(document).ready(function () {
-        //$('#searchbtn').on('click', function (e) {
-    searchbutton.onclick = function(e) {
+$(document).ready(function () {
+    $('#searchbtn').on('click', function (e) {
         e.preventDefault();
         var searchText = $('#searchbox').val();
         $.ajax({
@@ -29,15 +25,16 @@ function search() {
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
+                    let id = $(d.id);
                     return ` <div class="apartment">
-                                <a href="/apartment/$(d.id)">
-                                    <img class="apartment-img" src="${d.firstImage}"/>
-                                    <h4> ${d.address}</h4>
-                                    <p> ${d.price}kr.</p>
-                                </a>
-                            </div>`
+                            <a href="/apartment/$(d.id)">
+                                <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
+                                <h4> ${d.address}</h4>
+                                <p> ${d.price}kr.</p>
+                            </a>
+                        </div>`
                 });
-                console.log(newHTML)
+                console.log(newHTML);
                 $('#apartments').html(newHTML.join(''));
                 $('#searchbox').val('')
             },
@@ -45,5 +42,13 @@ function search() {
                 console.error(error)
             }
         });
-    }
-}
+    });
+});
+
+
+
+
+
+
+
+

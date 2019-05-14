@@ -101,6 +101,14 @@ html, body {
         transform: rotateZ(150deg);}
 }
 
+apartment a {
+    transition: transform 0.5s;
+}
+
+apartment a:hover {
+    transform: scale(0.95);
+}
+
 #searchbtn {
     color: grey;
     padding: 9px;
@@ -110,7 +118,6 @@ html, body {
     margin-top: 1em;
 }
 
-
 .apartmentHeader {
     text-align: center;
 }
@@ -118,7 +125,6 @@ html, body {
 .profileHeader {
     text-align: center;
 }
-
 
 .infoContainer {
     margin-left: 10%
@@ -128,7 +134,6 @@ html, body {
     background-size: cover;
     background-position: center;
     height: 24px;
-
 }
 
 #loginbutton {
@@ -174,17 +179,12 @@ label[for=id_password] {
     text-align: center;
 }
 
-.apartment a {
-    color: black !important;
-    text-decoration: none;
-}
 
 .apartment-img {
     width: 100%;
     transition: transform 1s ease-in;
     margin-left: 5px;
 }
-
 
 
 .apartment-img1 {
@@ -196,42 +196,6 @@ label[for=id_password] {
     margin-left: 10px;
     margin-top: 5px;
 }
-
-#apartments .apartment:hover {
-    background-image: linear-gradient(#C500E2, #9A27F7),
-    linear-gradient(#6564FF, #2A96FA),
-    linear-gradient(#2FF89F, #68FF6B),
-    linear-gradient(#F82D97, #E82FCE);
-    background-repeat: no-repeat;
-    background-position: left top, right top, right bottom, left bottom;
-    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
-    animation: circle-around .5s ease-in both;
-    cursor: pointer;
-}
-
-#apartments .apartment:hover .apartment-img {
-    transform: perspective(400px) scale(1.1) rotateY(15deg);
-}
-
-@keyframes circle-around {
-    0% {
-        background-size: 0 3px, 3px 0, 0 3px, 3px 0;
-    }
-    25% {
-        background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
-    }
-    50% {
-        background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
-    }
-    75% {
-        background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
-    }
-    100% {
-        background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
-    }
-}
-
-
 
 #filter-box {
     width: 25%;
@@ -246,4 +210,11 @@ label[for=id_password] {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.profile-image2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
 }
