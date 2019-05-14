@@ -71,3 +71,6 @@ def update_apartment(request, id):
         'id': id
     })
 
+
+def payment_success(request):
+    return render(request, 'apartment/payment_success.html')

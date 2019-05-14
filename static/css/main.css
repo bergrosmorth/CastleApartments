@@ -220,7 +220,11 @@ label[for=id_password] {
 }
 
 #nextButton {
-    background-color: green !important;
-    border-color: green;
+    background-color: green;
     margin-top: 2em;
+    color: whitesmoke;
+}
+
+#paymentText {
+    text-align: center;
 }
