@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p>IS THIS RIGHT </p>
+<form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
+        {% csrf_token %}
+        {{ form }}
+
+</form>
 
 {% endblock %}
