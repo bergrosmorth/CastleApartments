@@ -27,6 +27,9 @@
                     <button class="btn btn-primary" id="buybutton">Buy Apartment</button>
                     <!-- kannski bæta við make offer -->
                     </a>
+                    <button type="button" class="block btn btn-warning" >
+                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite
+                    </button>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
                     <a href="{% url 'delete_apartment' apartment.id %}" class="block btn btn-primary">Delete Apartment</a>
@@ -44,8 +47,21 @@
                         {% endif %}
                 {% endfor %}
             </div>
+            <br>
             <div class="col-md-6">
-                <p>Realtor: {{ apartment.realator_id }}</p>
+                <li class="list-group-item">
+                        <div class="col-xs-12 col-sm-3">
+                            <img src="{{ apartment.realator.profile.image }}" alt="{{ apartment.realator.profile.name }}" class="img-responsive img-circle" />
+                        </div>
+                        <div class="col-xs-12 col-sm-9">
+                            <span class="name">Fasteignasali:</span><br/>
+                            <span class="glyphicon glyphicon-user" title=name"> {{ apartment.realator.profile.name }}</span>
+                            <br><span class="glyphicon glyphicon-map-marker" title=address"> {{ apartment.realator.profile.address }}</span>
+                            <br><span class="glyphicon glyphicon-earphone" title="phone"> {{ apartment.realator.profile.phone }}</span>
+                            <br><span class="glyphicon glyphicon-paperclip" title="email"> {{ apartment.realator.profile.email }}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
             </div>
         </div>
     <div class="row">
