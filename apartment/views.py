@@ -20,8 +20,7 @@ def index(request):
 # /apartment/1
 def get_apartment_by_id(request, id):
     return render(request, 'apartment/apartment_details.html', {
-        'apartment': get_object_or_404(Apartment, pk=id)
-    })
+        'apartment': get_object_or_404(Apartment, pk=id)})
 
 def add_apartment(request):
     if request.method == 'POST':
@@ -30,14 +29,13 @@ def add_apartment(request):
             apartment = form.save(commit=False)
             apartment.realator = request.user
             apartment.save()
-            apartmentImage = ApartmentImage()
+            '''apartmentImage = ApartmentImage()
             myfile = request.FILES['myfile']
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
             apartmentImage.image = fs.url(filename)
             apartmentImage.apartment = apartment
-            apartmentImage.save()
-            '''
+            apartmentImage.save()'''
             fs = FileSystemStorage()
             for key in request.FILES.keys():
                 for formfile in request.FILES.getlist(key):
@@ -45,13 +43,12 @@ def add_apartment(request):
                     filename = fs.save(formfile.name, formfile)
                     house_image.image = fs.url(filename)
                     house_image.apartment = apartment
-                    house_image.save()'''
+                    house_image.save()
             return redirect('apartment-index')
     else:
         form = ApartmentAddForm()
     return render(request, 'apartment/add_apartment.html', {
-        'form': form
-    })
+        'form': form})
 
 def delete_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
@@ -64,12 +61,10 @@ def buy_apartment(request, id):
     if request.POST:
         return render(request, 'apartment/review_buyer.html',{
             'form': form,
-            'apartment': get_object_or_404(Apartment, pk=id)
-                      })
+            'apartment': get_object_or_404(Apartment, pk=id)})
     return render(request, 'apartment/buy_apartment.html', {
         'form': form,
-        'apartment': get_object_or_404(Apartment, pk=id)
-    })
+        'apartment': get_object_or_404(Apartment, pk=id)})
 
 def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
@@ -82,7 +77,7 @@ def update_apartment(request, id):
         form = ApartmentUpdateForm(instance=instance)
     return render(request, 'apartment/update_apartment.html', {
         'form': form,
-        'id': id
+        'id': id})
 
 
 def payment_success(request):
