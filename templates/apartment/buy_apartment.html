@@ -5,36 +5,9 @@
     <form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
         {% csrf_token %}
         {{ form }}
-        <p><b>SSN:</b><br><input type="number" placeholder="SSN" name="SSN"></p>
-        <p><b>Card Information:</b></p>
-        <input type="number" placeholder="Card Number" name="cardnumber">
-        <input type="number" placeholder="CVC" name="cvc">
-        <p><b>Expiration Date:</b></p>
-        <select name='expireMM' id='expireMM'>
-            <option value=''>Month</option>
-            <option value='01'>January</option>
-            <option value='02'>February</option>
-            <option value='03'>March</option>
-            <option value='04'>April</option>
-            <option value='05'>May</option>
-            <option value='06'>June</option>
-            <option value='07'>July</option>
-            <option value='08'>August</option>
-            <option value='09'>September</option>
-            <option value='10'>October</option>
-            <option value='11'>November</option>
-            <option value='12'>December</option>
-        </select>
-        <select name='expireYY' id='expireYY'>
-            <option value=''>Year</option>
-            <option value='10'>2019</option>
-            <option value='11'>2020</option>
-            <option value='12'>2021</option>
-            <option value='12'>2022</option>
-            <option value='12'>2023</option>
-            <option value='12'>2024</option>
-        </select>
-        <br>
+        {{ bform }}
+        <input id="sammala" type="checkbox" required >
+        <label for="sammala">Are all those informations right?</label>
         <input type="submit" value="Next" id="nextButton" class="btn" />
     </form>
 

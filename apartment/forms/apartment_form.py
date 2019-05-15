@@ -1,6 +1,6 @@
 from django.forms import ModelForm, widgets
 from django import forms
-from apartment.models import Apartment
+from apartment.models import Apartment, BuyerInformation
 from profile.models import Profile
 
 
@@ -28,7 +28,18 @@ class BuyApartmentForm(ModelForm):
             'city': widgets.TextInput(attrs={'class': 'form-control'}),
             'zip': widgets.TextInput(attrs={'class': 'form-control'}),
             'country': widgets.Select(attrs={'class': 'form-control'}),
-            'SSN': widgets.NumberInput(attrs={'class': 'form-control'}),
+        }
+
+class BuyerInformationForm(ModelForm):
+    class Meta:
+        model = BuyerInformation
+        exclude = ['id', 'user', 'apartment']
+        widgets = {
+            'ssn': widgets.TextInput(attrs={'class': 'form-control'}),
+            'cardnumber': widgets.TextInput(attrs={'class': 'form-control'}),
+            'cvc': widgets.TextInput(attrs={'class': 'form-control'}),
+            'month':widgets.TextInput(attrs={'class': 'form-control'}),
+            'year': widgets.TextInput(attrs={'class': 'form-control'}),
         }
 
 class BuyProfile(ModelForm):

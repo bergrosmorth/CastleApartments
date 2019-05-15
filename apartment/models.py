@@ -33,9 +33,14 @@ class ApartmentImage(models.Model):
 
 class BuyerInformation(models.Model):
     SSN = models.CharField(max_length=10)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
     cardnumber = models.CharField(max_length=16)
     cvc = models.CharField(max_length=3)
     month = models.CharField(max_length=10)
     year = models.CharField(max_length=4)
+
+    def __str__(self):
+        return self.SSN
 
 

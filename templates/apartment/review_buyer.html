@@ -13,6 +13,7 @@
     <form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
         {% csrf_token %}
         {{ form }}
+        {{ bform }}
     </form>
 
 {% endblock %}
