@@ -13,7 +13,7 @@ function changeprice() {
                     console.log(d.id)
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
                             </a>
@@ -43,7 +43,7 @@ function changesize() {
                 var newHTML = resp.data.map(d => {
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
                             </a>
@@ -71,7 +71,7 @@ jQuery(document).ready(function () {
                 var newHTML = resp.data.map(d => {
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
                             </a>
@@ -101,7 +101,7 @@ jQuery(document).ready(function () {
                     let sid = $(d.id);
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
                             </a>
@@ -131,7 +131,7 @@ jQuery(document).ready(function () {
                 var newHTML = resp.data.map(d => {
                     return ` <div class="apartment">
                     <a href="/apartment/${d.id}"></a>
-                        <img class="apartment-img" src="${d.firstimage}"/>
+                        <img class="apartment-img" src="${d.firstimage}">
                         <h4> ${d.address}</h4>
                         <p> ${d.price}kr.</p>  
                 </div>`
