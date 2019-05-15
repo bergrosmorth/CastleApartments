@@ -296,7 +296,29 @@ label[for=id_cardnumber] {
 
 #zip {
     width: 80%;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    color: #474747;
+    text-align: left
 }
+
+#rooms {
+    width: 15%;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
+    position: relative;
+    color: #474747;
+    text-align: left
+}
+
+
 
 input[type="range"] {
   display: block;
@@ -328,3 +350,4 @@ border: 2px solid #e74c3c;
 input[type="range"]::-webkit-slider-thumb:active {
 transform: scale(1.6);
 }
+
