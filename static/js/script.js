@@ -9,13 +9,15 @@ function changeprice() {
             url: '/apartment/?price_filter=' + millions,
             type: 'GET',
             success: function (resp) {
+
                 var newHTML = resp.data.map(d => {
                     console.log(d.id)
+                    d.price = d.price.toLocaleString()
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
-                                <p> ${d.price}kr.</p>
+                                <p> ${d.price} kr.</p>
                             </a>
                         </div>`
                 });
@@ -41,11 +43,12 @@ function changesize() {
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
+                    d.price = d.price.toLocaleString()
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
-                                <p> ${d.price}kr.</p>
+                                <p> ${d.price} kr.</p>
                             </a>
                         </div>`
                 });
@@ -69,11 +72,12 @@ jQuery(document).ready(function () {
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
+                    d.price = d.price.toLocaleString()
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
-                                <p> ${d.price}kr.</p>
+                                <p> ${d.price} kr.</p>
                             </a>
                         </div>`
                 });
@@ -99,11 +103,12 @@ jQuery(document).ready(function () {
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
                     let sid = $(d.id);
+                    d.price = d.price.toLocaleString()
                     return ` <div class="apartment">
                             <a href="/apartment/${d.id}">
-                                <img class="apartment-img" src=${d.firstimage}/>
+                                <img class="apartment-img" src=${d.firstimage}>
                                 <h4> ${d.address}</h4>
-                                <p> ${d.price}kr.</p>
+                                <p> ${d.price} kr.</p>
                             </a>
                         </div>`
                 });
@@ -129,11 +134,13 @@ jQuery(document).ready(function () {
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
+                    d.price = d.price.toLocaleString()
                     return ` <div class="apartment">
-                    <a href="/apartment/${d.id}"></a>
-                        <img class="apartment-img" src="${d.firstimage}"/>
+                    <a href="/apartment/${d.id}">
+                        <img class="apartment-img" src="${d.firstimage}">
                         <h4> ${d.address}</h4>
-                        <p> ${d.price}kr.</p>  
+                        <p> ${d.price} kr.</p>
+                        </a>
                 </div>`
                 });
                 console.log(newHTML);
