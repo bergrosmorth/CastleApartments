@@ -130,10 +130,11 @@ jQuery(document).ready(function () {
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
                     return ` <div class="apartment">
-                    <a href="/apartment/${d.id}"></a>
+                    <a href="/apartment/${d.id}">
                         <img class="apartment-img" src="${d.firstimage}">
                         <h4> ${d.address}</h4>
                         <p> ${d.price}kr.</p>  
+                    </a>
                 </div>`
                 });
                 console.log(newHTML);
