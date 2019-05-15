@@ -24,10 +24,10 @@
                 <p id="desctexti">{{ apartment.description }}</p>
                 {% if user.is_authenticated and not user.is_superuser %}
                     <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
-                    <button class="btn btn-primary" id="buybutton">Buy Apartment</button>
+                    <button class="btn" id="nextButton">Buy Apartment</button>
                     <!-- kannski bæta við make offer -->
                     </a>
-                    <button type="button" class="block btn btn-warning" >
+                    <button type="button" class="btn" id="mainButton">
                          <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite
                     </button>
                 {% endif %}
