@@ -166,6 +166,17 @@ label[for=id_password] {
     text-align: left;
 }
 
+#filter-box {
+    border: 1px solid black;
+    background-color: #EDEDED;
+}
+
+.col-s-12 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+
 #apartments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -179,13 +190,11 @@ label[for=id_password] {
     text-align: center;
 }
 
-
 .apartment-img {
     width: 100%;
     transition: transform 1s ease-in;
     margin-left: 5px;
 }
-
 
 .apartment-img1 {
     width: 100%;
@@ -195,11 +204,6 @@ label[for=id_password] {
     width: 18%;
     margin-left: 10px;
     margin-top: 5px;
-}
-
-#filter-box {
-    width: 25%;
-    border: 2px solid black;
 }
 
 #apartmentdesc {
@@ -220,9 +224,33 @@ label[for=id_password] {
 }
 
 #nextButton {
-    background-color: green;
-    margin-top: 2em;
-    color: whitesmoke;
+    background-color: #34BF2A;
+    border-color: #0B9E00;
+    margin: 0.5em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#goBackButton {
+    background-color: #FE5353;
+    border-color: #FE0101;
+    margin: 0.5em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#mainButton {
+    background-color: lightsteelblue;
+    border-color: #b0c4ff;
+    margin: 0.5em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 #paymentText {

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyProfile
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyerInformationForm
 from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
 
@@ -93,21 +93,30 @@ def add_apartment(request):
     return render(request, 'apartment/add_apartment.html', {
         'form': form})
 
+
 def delete_apartment(request, id):
     apartment = get_object_or_404(Apartment, pk=id)
     apartment.delete()
     return redirect('apartment-index')
 
+
 def buy_apartment(request, id):
     house = Apartment.objects.get(pk=id)
     form = BuyApartmentForm(instance=house)
+    buyer = BuyerInformationForm()
     if request.POST:
-        return render(request, 'apartment/review_buyer.html',{
-            'form': form,
-            'apartment': get_object_or_404(Apartment, pk=id)})
+        buyer = BuyerInformationForm(data=request.POST)
+        if buyer.is_valid():
+            b = buyer.save(commit=False)
+            b.user = request.user
+            b.apartment = house
+            b.save()
+            return render(request, 'apartment/payment_success.html')
     return render(request, 'apartment/buy_apartment.html', {
         'form': form,
+        'bform': buyer,
         'apartment': get_object_or_404(Apartment, pk=id)})
+
 
 def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
