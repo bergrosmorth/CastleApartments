@@ -1,43 +1,39 @@
-INSERT INTO profile_profile (address, phone, user_id) VALUES('Hrauntunga 69', 8989612, 1);
-
-INSERT INTO profile_profileimage(image, profile_id) VALUES ('https://static1.squarespace.com/static/53a8283de4b00f6c42318d1a/53a828b8e4b057f6687a7837/58b02130db29d65c64131fd9/1487938244007/21+copy.jpg', 1);
-
-INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms, description, realator_id) VALUES('Kinnargata 3', 'Garðabær', 93, '210', 90.9, 110000000, 5, 'Flott hús', 1);
-INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id ) VALUES('Kögursel 20', 'Reykjavík', 93, '109', 78.5, 57000000, 4, 'Ljótt hús', 1);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms, description, realator_id) VALUES('Kinnargata 3', 'Garðabær', 93, '210', 90.9, 110000000, 5, 'Flott hús', 22);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id ) VALUES('Kögursel 20', 'Reykjavík', 93, '109', 78.5, 57000000, 4, 'Ljótt hús', 22);
 INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id ) VALUES('5943 New England Woods Dr', 'Burke', 193, '22015', 100, 120000000, 6, 'hús', 2);
 INSERT INTO apartment_apartment (address, city, country_id, zip, size, price, rooms,description, realator_id) VALUES('Skildingarnes 40', 'Reykjavík', 93, '090152', 64.3, 99000000, 5, 'annað hús', 2);
-INSERT INTO apartment_apartment (address, city, country_id, zip, size, price,rooms, description, realator_id) VALUES('5431 Vista Grande St', 'West Hollywood', 193, 59.64,'210', 210000000, 7, 'hollywood', 3);
+INSERT INTO apartment_apartment (address, city, country_id, zip, size, price,rooms, description, realator_id) VALUES('5431 Vista Grande St', 'West Hollywood', 193, 59.64,'210', 210000000, 7, 'hollywood', 22);
 
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://media.treehugger.com/assets/images/2017/12/Villa-S-by-RAU-Architecten-3-1020x610_1.jpg.860x0_q70_crop-scale.jpg',1);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://fashionelly.com/images/2016/Modern-Living-Room-Designs-You-Should-Try-5.jpg',1);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.bestparticleboardfurniture.com/is/productpic/pb_uk41531964352.jpg',1);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/9/38/938714.jpg',1);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.icelandairhotels.com/static/gallery/marina-is/icelandair.hotel_.reykjavik.marina.suite_.2floor.jpg',1);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://serefni.is/wp-content/uploads/2015/04/Nordsj%C3%B6-Silfurgr%C3%A1tt-g%C3%B3lf-og-veggir-ON.00.76.jpg',1);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/7/77/777881.jpg',2);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/2/2018/01/b3da7335a48eeb71b7c691a5b007621c97fba9cd.jpeg',2);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://bryndiseva.is/wp-content/uploads/2016/03/Bedroom_01.jpg?w=575&h=751',2);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/1/2/92/1029211.jpg',2);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://m2.mbl.is/jT5HINgbRwv6_Lo7YjGMt_cV9Ys=/730x487/filters:cropcenter(58,56)/frimg/1/11/38/1113841.jpg',2);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.stag.is/static/gallery/myndir-arnarborg-13/lg/forstofa.jpg',2);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.theplancollection.com/Upload/Plans/SubCategory/090218023227_Country_Plan_1421158_600_400.jpg',3);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.shopify.com/s/files/1/0017/9496/5570/collections/living_590x.jpeg?v=1526331879',3);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://krom.is/wp-content/uploads/2017/03/f14645be24bb19e3b5399ebd9f888ac1.jpg',3);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://d5hu1uk9q8r1p.cloudfront.net/ormsson.is/skrar/hth-innrettingar/focus-hvid-eksklusivt-k-kken-01-hth.jpg',3);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://images.victorianplumbing.co.uk/images/Cove-Complete-Bathroom-Suite-l.jpg',3);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.rumfatalagerinn.is/lisalib/getfile.aspx?itemid=bf11b045-0fe2-11e6-80cf-005056bc4a5e',3);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/7/95/795710.jpg',4);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://i.pinimg.com/originals/33/ca/5e/33ca5e3089f9152b3ade900ae8cf9a2d.jpg',4);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://bjargeyogco.files.wordpress.com/2018/08/img_4062.jpg?w=1000',4);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://www.lavaconstruction.com/wp-content/uploads/2015/07/kitchen-furniture-2.jpg',4);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://fasteignir.visir.is/thumbnail/489x374/inspiration/c11e686f110ea5faf6e9ae79a4daea7d.jpg',4);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://3.bp.blogspot.com/-ZrasauQkcNg/Wlt0HG_t_HI/AAAAAAAASGo/27o6aftjxzYRc4nHoeBrZL5Rcm3fAYLVACLcBGAs/s1600/Sk%25C3%25A4rmavbild%2B2011-10-12%2Bkl.%2B15.07.06.png',4);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://www.contemporist.com/wp-content/uploads/2016/05/modern-architecture_280516_01-800x533.jpg',5);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/08/14/12/88-89.png',5);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://serefni.is/wp-content/uploads/2015/04/Nordsj%C3%B6-Svefnherbergi-steingr%C3%A1tt.jpg',5);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.hugi.is/media/contentimages/96260.jpg',5);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://www.egillarnason.is/wp-content/uploads/2016/03/Bistrot_riv_01r.jpg.1110x500_q75_crop.jpg',5);
-INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://st.houzz.com/simages/1088314_0_8-4279-eclectic-hall.jpg',5);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://media.treehugger.com/assets/images/2017/12/Villa-S-by-RAU-Architecten-3-1020x610_1.jpg.860x0_q70_crop-scale.jpg',9);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://fashionelly.com/images/2016/Modern-Living-Room-Designs-You-Should-Try-5.jpg',9);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.bestparticleboardfurniture.com/is/productpic/pb_uk41531964352.jpg',9);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/9/38/938714.jpg',9);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.icelandairhotels.com/static/gallery/marina-is/icelandair.hotel_.reykjavik.marina.suite_.2floor.jpg',9);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://serefni.is/wp-content/uploads/2015/04/Nordsj%C3%B6-Silfurgr%C3%A1tt-g%C3%B3lf-og-veggir-ON.00.76.jpg',9);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/7/77/777881.jpg',10);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/2/2018/01/b3da7335a48eeb71b7c691a5b007621c97fba9cd.jpeg',10);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://bryndiseva.is/wp-content/uploads/2016/03/Bedroom_01.jpg?w=575&h=751',10);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/1/2/92/1029211.jpg',10);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://m2.mbl.is/jT5HINgbRwv6_Lo7YjGMt_cV9Ys=/730x487/filters:cropcenter(58,56)/frimg/1/11/38/1113841.jpg',10);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.stag.is/static/gallery/myndir-arnarborg-13/lg/forstofa.jpg',10);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.theplancollection.com/Upload/Plans/SubCategory/090218023227_Country_Plan_1421158_600_400.jpg',11);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.shopify.com/s/files/1/0017/9496/5570/collections/living_590x.jpeg?v=1526331879',11);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://krom.is/wp-content/uploads/2017/03/f14645be24bb19e3b5399ebd9f888ac1.jpg',11);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://d5hu1uk9q8r1p.cloudfront.net/ormsson.is/skrar/hth-innrettingar/focus-hvid-eksklusivt-k-kken-01-hth.jpg',11);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://images.victorianplumbing.co.uk/images/Cove-Complete-Bathroom-Suite-l.jpg',11);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.rumfatalagerinn.is/lisalib/getfile.aspx?itemid=bf11b045-0fe2-11e6-80cf-005056bc4a5e',11);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://cdn.mbl.is/frimg/7/95/795710.jpg',12);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://i.pinimg.com/originals/33/ca/5e/33ca5e3089f9152b3ade900ae8cf9a2d.jpg',12);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://bjargeyogco.files.wordpress.com/2018/08/img_4062.jpg?w=1000',12);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://www.lavaconstruction.com/wp-content/uploads/2015/07/kitchen-furniture-2.jpg',12);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://fasteignir.visir.is/thumbnail/489x374/inspiration/c11e686f110ea5faf6e9ae79a4daea7d.jpg',12);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://3.bp.blogspot.com/-ZrasauQkcNg/Wlt0HG_t_HI/AAAAAAAASGo/27o6aftjxzYRc4nHoeBrZL5Rcm3fAYLVACLcBGAs/s1600/Sk%25C3%25A4rmavbild%2B2011-10-12%2Bkl.%2B15.07.06.png',12);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://www.contemporist.com/wp-content/uploads/2016/05/modern-architecture_280516_01-800x533.jpg',13);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/08/14/12/88-89.png',13);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://serefni.is/wp-content/uploads/2015/04/Nordsj%C3%B6-Svefnherbergi-steingr%C3%A1tt.jpg',13);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('https://www.hugi.is/media/contentimages/96260.jpg',13);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://www.egillarnason.is/wp-content/uploads/2016/03/Bistrot_riv_01r.jpg.1110x500_q75_crop.jpg',13);
+INSERT INTO apartment_apartmentimage(image, apartment_id) VALUES ('http://st.houzz.com/simages/1088314_0_8-4279-eclectic-hall.jpg',13);
 
 
 --- Insert into Countries ---

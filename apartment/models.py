@@ -31,3 +31,11 @@ class ApartmentImage(models.Model):
         return self.image
 
 
+class BuyerInformation(models.Model):
+    SSN = models.CharField(max_length=10)
+    cardnumber = models.CharField(max_length=16)
+    cvc = models.CharField(max_length=3)
+    month = models.CharField(max_length=10)
+    year = models.CharField(max_length=4)
+
+

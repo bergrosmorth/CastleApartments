@@ -17,13 +17,45 @@ def index(request):
 
     elif 'price_filter' in request.GET:
         price_filter = request.GET['price_filter']
-        print(price_filter)
         apartmentos = [{
             'id': x.id,
-            'firstimage': x.apartmentimage_set.first().image,
+            #'firstimage': x.apartmentimage_set.first().image,
             'address': x.address,
             'price': x.price
         } for x in Apartment.objects.filter(price__range=(0, price_filter))]
+        return JsonResponse({'data': apartmentos})
+
+    elif 'size_filter' in request.GET:
+        size_filter = request.GET['size_filter']
+        apartmentos = [{
+            'id': x.id,
+            #'firstimage': x.apartmentimage_set.first().image,
+            'size': x.size,
+            'address': x.address,
+            'price': x.price
+        } for x in Apartment.objects.filter(size__range=(0, size_filter))]
+        return JsonResponse({'data': apartmentos})
+
+    elif 'room_filter' in request.GET:
+        room_filter = request.GET['room_filter']
+        apartmentos = [{
+            'id': x.id,
+            #'firstimage': x.apartmentimage_set.first().image,
+            'rooms': x.rooms,
+            'address': x.address,
+            'price': x.price
+        } for x in Apartment.objects.filter(rooms__range=(0, room_filter))]
+        return JsonResponse({'data': apartmentos})
+
+    elif 'zip_filter' in request.GET:
+        zip_filter = request.GET['zip_filter']
+        apartmentos = [{
+            'id': x.id,
+            #'firstimage': x.apartmentimage_set.first().image,
+            'zip': x.zip,
+            'address': x.address,
+            'price': x.price
+        } for x in Apartment.objects.filter(zip__exact=zip_filter)]
         return JsonResponse({'data': apartmentos})
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)
@@ -76,6 +108,8 @@ def buy_apartment(request, id):
     return render(request, 'apartment/buy_apartment.html', {
         'form': form,
         'apartment': get_object_or_404(Apartment, pk=id)})
+
+
 
 def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
