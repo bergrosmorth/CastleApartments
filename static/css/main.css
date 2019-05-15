@@ -290,3 +290,7 @@ label[for=id_cardnumber] {
     width: 100%;
 
 }
+
+#zip {
+    width: 80%;
+}
