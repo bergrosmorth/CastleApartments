@@ -40,10 +40,12 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 image-set">
                     {% for apartmentimage in apartment.apartmentimage_set.all %}
                         {% if forloop.counter < 6 %}
-                    <img src="{{ apartmentimage.image }}" class="apartment-img2" id="ApartmentPhotos"/>
+                            <a href="#">
+                                <img src="{{ apartmentimage.image }}" class="apartment-img2" id="ApartmentPhotos"/>
+                            </a>
                         {% endif %}
                 {% endfor %}
             </div>

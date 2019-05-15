@@ -171,3 +171,11 @@ $('zip').empty();
 $.each(postnr, function (i, p) {
     $('#zip').append($('<option></option>').val(p).html(p));
     });
+
+
+$(".apartment-img2").on("click",function(ev) {
+    var clickedImageUrl = $(this).attr("src");
+    var mainImageElement = $(".apartment-img1");
+    mainImageElement[0].setAttribute("src", clickedImageUrl);
+    ev.preventDefault();
+});
