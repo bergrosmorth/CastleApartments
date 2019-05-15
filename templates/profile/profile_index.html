@@ -6,7 +6,7 @@
                 <img src="{{ profile.image }}" class="profile-image2">
             </div>
             <div class="col-6">
-                <h6><b>Username: {{ user.username }}</b> </h6>
+                <h6><b>Username: {{ user.username}}</b></h6>
                 <form class="form form-horizontal"  method="post">
                     {% csrf_token %}
                     {{ form }}

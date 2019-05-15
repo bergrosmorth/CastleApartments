@@ -2,16 +2,17 @@
 {% block content %}
 
     <h2>Are these informations correct? </h2>
-    <a href="{% url 'payment_success' %}" id="payment_success">
-    <input type="submit" value="Yes, correct" id="correctButton" class="btn btn-primary" />
-    </a>
-    <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
-    <input type="submit" value="No incorrect, go back" id="incorrectButton" class="btn btn-primary" />
-    </a>
-<form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
+    <div class=>
+        <a href="{% url 'buy_apartment' apartment.id %}" id="buy_apartment">
+        <input type="submit" value="No incorrect, go back" id="goBackButton" class="btn" /></a>
+    </div>
+    <div>
+        <a href="{% url 'payment_success' %}" id="payment_success">
+        <input type="submit" value="Yes, correct" id="nextButton" class="btn"/></a>
+    </div>
+    <form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
         {% csrf_token %}
         {{ form }}
-
-</form>
+    </form>
 
 {% endblock %}
