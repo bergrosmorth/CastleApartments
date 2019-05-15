@@ -167,8 +167,13 @@ label[for=id_password] {
 }
 
 #filter-box {
-    border: 1px solid black;
-    background-color: #EDEDED;
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .col-s-12 {
