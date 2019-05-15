@@ -5,6 +5,7 @@
     <form class="form form-horizontal" action="{% url 'buy_apartment' apartment.id%}" method="post">
         {% csrf_token %}
         {{ form }}
+        <h3>Card information</h3>
         {{ bform }}
         <input id="sammala" type="checkbox" required >
         <label for="sammala">Are all those informations right?</label>
