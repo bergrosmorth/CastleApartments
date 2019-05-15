@@ -10,8 +10,9 @@ function changeprice() {
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
+                    console.log(d.id)
                     return ` <div class="apartment">
-                            <a href="/apartment/$(d.id)">
+                            <a href="/apartment/${d.id}">
                                 <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
@@ -41,7 +42,7 @@ function changesize() {
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
                     return ` <div class="apartment">
-                            <a href="/apartment/$(d.id)">
+                            <a href="/apartment/${d.id}">
                                 <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
@@ -69,7 +70,7 @@ jQuery(document).ready(function () {
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
                     return ` <div class="apartment">
-                            <a href="/apartment/$(d.id)">
+                            <a href="/apartment/${d.id}">
                                 <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
@@ -97,8 +98,9 @@ jQuery(document).ready(function () {
             type: 'GET',
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
+                    let sid = $(d.id);
                     return ` <div class="apartment">
-                            <a href="/apartment/$(d.id)">
+                            <a href="/apartment/${d.id}">
                                 <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
                                 <h4> ${d.address}</h4>
                                 <p> ${d.price}kr.</p>
@@ -129,7 +131,7 @@ jQuery(document).ready(function () {
                 var newHTML = resp.data.map(d => {
                     let id = $(d.id);
                     return ` <div class="apartment">
-                    <a href="/apartment/$(d.id)">
+                    <a href="/apartment/${d.id}">
                         <img class="apartment-img" src="apartment.apartmentimage_set.first.image}}"/>
                         <h4> ${d.address}</h4>
                         <p> ${d.price}kr.</p>
