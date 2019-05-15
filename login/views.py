@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate
 
 # Create your views here.
 def get_frontPage(request):
+    import pdb; pdb.set_trace()
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'login/login-index.html', context)
 
