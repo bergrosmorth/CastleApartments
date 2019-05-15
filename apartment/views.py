@@ -102,7 +102,7 @@ def delete_apartment(request, id):
 
 def buy_apartment(request, id):
     house = Apartment.objects.get(pk=id)
-    form = BuyApartmentForm(instance=house)
+    form = BuyApartmentForm()
     buyer = BuyerInformationForm()
     if request.POST:
         buyer = BuyerInformationForm(data=request.POST)

@@ -280,3 +280,13 @@ label[for=id_favorite_apartments] {
     width: 100%;
 
 }
+
+label[for=id_SSN] {
+    width: 100%;
+
+}
+
+label[for=id_cardnumber] {
+    width: 100%;
+
+}
