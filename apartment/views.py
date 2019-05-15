@@ -19,7 +19,7 @@ def index(request):
         price_filter = request.GET['price_filter']
         apartmentos = [{
             'id': x.id,
-            #'firstimage': x.apartmentimage_set.first().image,
+            'firstimage': x.apartmentimage_set.first().image,
             'address': x.address,
             'price': x.price
         } for x in Apartment.objects.filter(price__range=(0, price_filter))]
@@ -29,7 +29,7 @@ def index(request):
         size_filter = request.GET['size_filter']
         apartmentos = [{
             'id': x.id,
-            #'firstimage': x.apartmentimage_set.first().image,
+            'firstimage': x.apartmentimage_set.first().image,
             'size': x.size,
             'address': x.address,
             'price': x.price
@@ -40,7 +40,7 @@ def index(request):
         room_filter = request.GET['room_filter']
         apartmentos = [{
             'id': x.id,
-            #'firstimage': x.apartmentimage_set.first().image,
+            'firstimage': x.apartmentimage_set.first().image,
             'rooms': x.rooms,
             'address': x.address,
             'price': x.price
@@ -51,7 +51,7 @@ def index(request):
         zip_filter = request.GET['zip_filter']
         apartmentos = [{
             'id': x.id,
-            #'firstimage': x.apartmentimage_set.first().image,
+            'firstimage': x.apartmentimage_set.first().image,
             'zip': x.zip,
             'address': x.address,
             'price': x.price
