@@ -227,8 +227,8 @@ label[for=id_password] {
 #nextButton {
     background-color: #34BF2A;
     border-color: #0B9E00;
-    margin: 1em;
-    color: whitesmoke;
+    margin: 0.5em;
+    color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -237,13 +237,22 @@ label[for=id_password] {
 #goBackButton {
     background-color: #FE5353;
     border-color: #FE0101;
-    margin: 1em;
-    color: whitesmoke;
+    margin: 0.5em;
+    color: white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
 }
 
+#mainButton {
+    background-color: lightsteelblue;
+    border-color: #b0c4ff;
+    margin: 0.5em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
 
 #paymentText {
     text-align: center;
