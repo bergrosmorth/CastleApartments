@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'login.apps.LoginConfig',
     'profile.apps.RealtorConfig',
-    'apartment.apps.ApartmentsConfig'
+    'apartment.apps.ApartmentsConfig',
 ]
 
 MIDDLEWARE = [

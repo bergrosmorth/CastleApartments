@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from profile.models import Profile
 from profile.forms.profile_form import ProfileForm
+from apartment.models import Apartment
 
 # Create your views here.
 

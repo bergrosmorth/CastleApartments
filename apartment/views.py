@@ -109,6 +109,8 @@ def buy_apartment(request, id):
         'form': form,
         'apartment': get_object_or_404(Apartment, pk=id)})
 
+
+
 def update_apartment(request, id):
     instance = get_object_or_404(Apartment, pk=id)
     if request.method == "POST":
