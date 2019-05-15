@@ -286,7 +286,6 @@ label[for=id_favorite_apartments] {
 
 label[for=id_SSN] {
     width: 100%;
-
 }
 
 label[for=id_cardnumber] {
@@ -297,7 +296,7 @@ label[for=id_cardnumber] {
 
 #zip {
     font-family: sans-serif;
-    font-size: 90%;
+    font-size: 100%;
     color: #444;
     padding: .6em 1.4em .5em .8em;
     width: 80%;
@@ -329,9 +328,6 @@ label[for=id_cardnumber] {
 #zip option {
     font-weight:normal;
 }
-
-
-
 
 #rooms {
     font-family: sans-serif;
@@ -383,7 +379,7 @@ input[type="range"] {
 }
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background-color: #e74c3c;
+  background-color: steelblue;
   width: 25px;
   height: 25px;
   border-radius: 50%;
