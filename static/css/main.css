@@ -153,6 +153,10 @@ label[for=id_username] {
     color: whitesmoke;
 }
 
+.register-form label[for=id_username] {
+    color: black;
+}
+
 label[for=id_password] {
     text-align: center;
     color: whitesmoke;
