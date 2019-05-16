@@ -184,6 +184,9 @@ label[for=id_password] {
     margin-bottom: 1em;
 }
 
+.apartment {
+    margin-right: 1%;
+}
 
 #apartments {
     display: grid;
