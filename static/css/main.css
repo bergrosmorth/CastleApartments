@@ -443,6 +443,18 @@ input[type=text]{
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+#orderby {
+    margin-top: 25px;
+    margin-left: 30%;
+    width: 100%;
+}
+
+h5, h6 {
+    display: inline;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
 
 @media screen and (max-width: 1250px){
     #filter-box {
