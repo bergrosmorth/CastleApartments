@@ -144,5 +144,3 @@ def payment_success(request):
     return render(request, 'apartment/payment_success.html')
 
 
-def favorites(request):
-    return render(request, 'apartment/favorites.html')

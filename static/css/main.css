@@ -157,6 +157,7 @@ label[for=id_username] {
     color: black;
 }
 
+
 label[for=id_password] {
     text-align: center;
     color: whitesmoke;
@@ -183,6 +184,9 @@ label[for=id_password] {
     margin-bottom: 1em;
 }
 
+.apartment {
+    margin-right: 1%;
+}
 
 #apartments {
     display: grid;
@@ -196,6 +200,12 @@ label[for=id_password] {
     background-color: white;
     text-align: center;
 }
+
+#loginpageApartments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 .apartment-img {
     width: 24em;

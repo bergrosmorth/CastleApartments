@@ -9,5 +9,4 @@ urlpatterns = [
     path('buy_apartment/<int:id>', views.buy_apartment, name="buy_apartment"),
     path('update_apartment/<int:id>', views.update_apartment, name="update_apartment"),
     path('payment_success', views.payment_success, name="payment_success"),
-    path('favorites', views.favorites, name="favorites"),
 ]
