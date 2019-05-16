@@ -71,7 +71,7 @@ def get_apartment_by_id(request, id):
         'apartment': get_object_or_404(Apartment, pk=id)})
 
 @login_required
-def add_apartment_2(request):
+def add_apartment(request):
 
     ImageFormSet = modelformset_factory(ApartmentImage, form=ApartmentImageForm, extra=6, max_num=6)
 
@@ -100,56 +100,6 @@ def add_apartment_2(request):
         image_formset = ImageFormSet(queryset=ApartmentImage.objects.none())
         return render(request, 'apartment/add_apartment.html', {
             'form': apartment_form, 'formset': image_formset})
-
-
-    '''
-    if request.method == 'POST':
-        apartment_form = ApartmentAddForm(data=request.POST, files=request.FILES)
-
-        if apartment_form.is_valid():
-            apartment = apartment_form.save(commit=False)
-            apartment.realator = request.user
-            apartment.save()
-
-            return redirect('apartment-index')
-        else:
-            return render(request, 'apartment/add_apartment.html', {
-                'form': apartment_form})
-
-    else:
-        apartment_form = ApartmentAddForm()
-        return render(request, 'apartment/add_apartment.html', {
-            'form': apartment_form})
-    '''
-
-
-def add_apartment(request):
-    if request.method == 'POST':
-        form = ApartmentAddForm(data=request.POST)
-        if form.is_valid():
-            apartment = form.save(commit=False)
-            apartment.realator = request.user
-            apartment.save()
-            '''apartmentImage = ApartmentImage()
-            myfile = request.FILES['myfile']
-            fs = FileSystemStorage()
-            filename = fs.save(myfile.name, myfile)
-            apartmentImage.image = fs.url(filename)
-            apartmentImage.apartment = apartment
-            apartmentImage.save()'''
-            fs = FileSystemStorage()
-            for key in request.FILES.keys():
-                for formfile in request.FILES.getlist(key):
-                    house_image = ApartmentImage()
-                    filename = fs.save(formfile.name, formfile)
-                    house_image.image = fs.url(filename)
-                    house_image.apartment = apartment
-                    house_image.save()
-            return redirect('apartment-index')
-    else:
-        form = ApartmentAddForm()
-    return render(request, 'apartment/add_apartment.html', {
-        'form': form, 'image_form': ApartmentImageForm()})
 
 
 def delete_apartment(request, id):

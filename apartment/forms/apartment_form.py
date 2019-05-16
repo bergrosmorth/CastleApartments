@@ -62,8 +62,6 @@ class ApartmentUpdateForm(ModelForm):
             'description': widgets.TextInput(attrs={'class': 'form-control'}),
         }
 
-#class SharingForms(forms.Form):
-#    photos = forms.ImageField()
 
 class ApartmentImageForm(ModelForm):
     class Meta:

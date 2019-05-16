@@ -8,24 +8,12 @@
 
     <div class="container-fluid">
         <div class="row">
-{#             <div class="col-md-6">  #}
-
-{#                {% for apartmentimage in apartment.apartmentimage_set.all %} #}
-
-{#                        {% if forloop.counter == 6 %} #}
-
-{#                    <img src="{{ apartmentimage.image }} " class="apartment-img1"/> #}
-{#                        {% endif %} #}
-
-{#                {% endfor %} #}
-
-{#            </div> #}
 
             <div class="col-md-6">
                 {% if apartment.apartmentimage_set.all %}
                     <img src="{{ apartment.apartmentimage_set.first.image.url }}" class="apartment-img1">
                 {% else %}
-                    <img src="{% static 'images/forsidumynd.jpg' %}" class="apartment-img1">
+                    <img src="{% static 'images/default.png' %}" class="apartment-img1">
                 {% endif %}
             </div>
 
@@ -57,13 +45,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 image-set">
-{#                     {% for apartmentimage in apartment.apartmentimage_set.all %} #}
-{#                         {% if forloop.counter < 6 %} #}
-{#                             <a href="#"> #}
-{#                                 <img src="{{ apartmentimage.image }}" class="apartment-img2" id="ApartmentPhotos"/> #}
-{#                            </a> #}
-{#                        {% endif %} #}
-{#                     {% endfor %} #}
 
                     {% if apartment.apartmentimage_set.all %}
                         {% for image in apartment.apartmentimage_set.all %}
