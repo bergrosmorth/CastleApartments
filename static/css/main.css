@@ -443,3 +443,22 @@ input[type=text]{
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+
+@media screen and (max-width: 1250px){
+    #filter-box {
+        display: none;
+    }
+
+    #searchbox {
+        display: none;
+    }
+
+    #searchbtn {
+        display: none;
+    }
+
+    .apartments {
+        width: 150%;
+    }
+
+}
