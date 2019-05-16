@@ -6,6 +6,7 @@ from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm
     BuyerInformationForm, ApartmentImageForm
 from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
+import json as simplejson
 
 
 def index(request):
@@ -19,7 +20,23 @@ def index(request):
         } for x in Apartment.objects.filter(address__icontains=search_filter)]
         return JsonResponse({'data': apartmentos})
 
-    elif 'price_filter' in request.GET:
+    if 'range_filter' in request.GET:
+        price = request.GET.get('price')
+        size = request.GET.get('size')
+        rooms = request.GET.get('rooms')
+        zip = request.GET.get('zip')
+        apartmentos = [{
+            'id': x.id,
+            'firstimage': x.apartmentimage_set.first().image,
+            'address': x.address,
+            'price': x.price,
+            'size': x.size,
+            'rooms': x.rooms,
+            'zip': x.zip
+        } for x in Apartment.objects.filter(price__range=(0, price))]
+        return JsonResponse({'data': apartmentos})
+
+    '''elif 'price_filter' in request.GET:
         price_filter = request.GET['price_filter']
         apartmentos = [{
             'id': x.id,
@@ -60,7 +77,7 @@ def index(request):
             'address': x.address,
             'price': x.price
         } for x in Apartment.objects.filter(zip__exact=zip_filter)]
-        return JsonResponse({'data': apartmentos})
+        return JsonResponse({'data': apartmentos})'''
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)
 
