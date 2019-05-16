@@ -240,6 +240,10 @@ label[for=id_password] {
     display: inline-block;
 }
 
+#nextButton:hover {
+    background-color: green;
+}
+
 #goBackButton {
     background-color: #FE5353;
     border-color: #FE0101;
@@ -250,6 +254,10 @@ label[for=id_password] {
     display: inline-block;
 }
 
+#goBackButton:hover {
+    background-color: #FE0101;
+}
+
 #mainButton {
     background-color: lightsteelblue;
     border-color: #b0c4ff;
@@ -258,6 +266,10 @@ label[for=id_password] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+#mainButton:hover {
+  background-color: steelblue;
 }
 
 #paymentText {
