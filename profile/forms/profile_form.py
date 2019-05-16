@@ -10,5 +10,4 @@ class ProfileForm(ModelForm):
             'profile_image': widgets.TextInput(attrs={'class': 'form-control'}),
             'phone_number': widgets.NumberInput(attrs={'class': 'form-control'}),
             'address': widgets.TextInput(attrs={'class': 'form-control'}),
-            'favorite_apartments': widgets.Select( attrs={'class': 'form-control'})
         }
