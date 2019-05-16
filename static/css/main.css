@@ -399,15 +399,20 @@ transform: scale(1.6);
 
 .errorlist {
     position: fixed;
-    top:0;
+    top: 0;
     width: 100%;
     left: 0;
-    background: white;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 2px;
     height: 40px;
+    color: #D8000C;
+    background-color: #FFD2D2;
+    vertical-align: center;
+    text-align: center;
 }
 .errorlist li  {
     list-style: none;
 }
+
+
 
 

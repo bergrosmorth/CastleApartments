@@ -9,7 +9,7 @@ from apartment.models import Apartment
 class AuthFormWithNewMessage(AuthenticationForm):
     error_messages = {
         'invalid_login':
-            "HAHAHAHAAH! Please enter a correct %(username)s and password. Note that both fields may be case-sensitive.",
+        "Please enter a correct %(username)s and password. Note that both fields may be case-sensitive.",
         'inactive': "This account is inactive."
     }
 
