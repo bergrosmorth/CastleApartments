@@ -42,9 +42,9 @@ class BuyerInformation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
     cardnumber = models.CharField(max_length=16)
-    cvc = models.CharField(max_length=3)
-    month = models.CharField(max_length=10)
+    month = models.CharField(max_length=2)
     year = models.CharField(max_length=4)
+    cvc = models.CharField(max_length=3)
 
     def __str__(self):
         return self.SSN

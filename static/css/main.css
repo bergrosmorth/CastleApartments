@@ -101,12 +101,8 @@ html, body {
         transform: rotateZ(150deg);}
 }
 
-.apartment a {
-    transition: transform 0.05s;
-}
-
 .apartment img:hover {
-    transform: scale(1.1);
+    transform: scale(1.04);
 }
 
 #searchbtn {
@@ -157,7 +153,6 @@ label[for=id_username] {
     color: black;
 }
 
-
 label[for=id_password] {
     text-align: center;
     color: whitesmoke;
@@ -203,7 +198,6 @@ label[for=id_password] {
     margin-left: 2%;
 }
 
-
 .apartment-img {
     width: 24em;
     height: 18em;
@@ -231,9 +225,9 @@ label[for=id_password] {
 
 .profile-image2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
 }
 
 #nextButton {
@@ -326,15 +320,19 @@ label[for=id_cardnumber] {
 }
 #zip::-ms-expand {
     display: none;
+
 }
+
 #zip:hover {
     border-color: #888;
 }
+
 #zip:focus {
     border-color: #aaa;
     color: #222;
     outline: none;
 }
+
 #zip option {
     font-weight:normal;
 }
@@ -352,8 +350,7 @@ label[for=id_cardnumber] {
     -webkit-appearance: none;
     appearance: none;
     background-color: #fff;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
@@ -362,19 +359,20 @@ label[for=id_cardnumber] {
 #rooms::-ms-expand {
     display: none;
 }
+
 #rooms:hover {
     border-color: #888;
 }
+
 #rooms:focus {
     border-color: #aaa;
     color: #222;
     outline: none;
 }
+
 #rooms option {
     font-weight:normal;
 }
-
-
 
 input[type="range"] {
   display: block;
@@ -387,6 +385,7 @@ input[type="range"] {
     margin-bottom: 5%;
   outline: 0;
 }
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background-color: steelblue;
@@ -419,13 +418,14 @@ transform: scale(1.6);
     vertical-align: center;
     text-align: center;
 }
+
 .errorlist li  {
     list-style: none;
 }
 
 
 input[type=text]{
-        display: block;
+    display: block;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
@@ -443,3 +443,22 @@ input[type=text]{
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+
+@media screen and (max-width: 1250px){
+    #filter-box {
+        display: none;
+    }
+
+    #searchbox {
+        display: none;
+    }
+
+    #searchbtn {
+        display: none;
+    }
+
+    .apartments {
+        width: 150%;
+    }
+
+}

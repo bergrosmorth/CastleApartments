@@ -93,6 +93,7 @@ def buy_apartment(request, id):
             b.user = request.user
             b.apartment = house
             b.save()
+            b.apartment.delete()
             return render(request, 'apartment/payment_success.html')
     return render(request, 'apartment/buy_apartment.html', {
         'form': form,
