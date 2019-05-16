@@ -184,10 +184,6 @@ label[for=id_password] {
     margin-bottom: 1em;
 }
 
-.apartment {
-    margin-right: 1%;
-}
-
 #apartments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -204,14 +200,13 @@ label[for=id_password] {
 #loginpageApartments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 2%;
 }
 
 
 .apartment-img {
     width: 24em;
     height: 18em;
-    transition: transform 1s ease-in;
-    margin-left: 5px;
 }
 
 .apartment-img1 {
