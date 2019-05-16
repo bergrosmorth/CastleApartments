@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-md-6 image-set">
                     {% for apartmentimage in apartment.apartmentimage_set.all %}
-                        {% if forloop.counter < 6 %}
+                        {% if forloop.counter < 7 %}
                             <a href="#">
                                 <img src="{{ apartmentimage.image }}" class="apartment-img2" id="ApartmentPhotos"/>
                             </a>
