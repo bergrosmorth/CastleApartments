@@ -2,10 +2,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <!--<div class="apartmentHeader">
+    <div class="apartmentHeader">
         <h3>Apartments for sale:</h3>
         <h6>Newest first</h6>
-    </div>-->
+    </div>
 
 
     <div>
@@ -42,6 +42,7 @@
                 Max size
                 <input type="range" min="1" max="500" value="100" class="slider" id="sizeInputID" oninput=changesize()>
                 <p><span id="sizeOutputID"></span> m² </p>
+                <button type="submit" id="leita">bleisadur</button>
             </div>
         </div>
         <div class="form-group col-xs-10" id="apartments">

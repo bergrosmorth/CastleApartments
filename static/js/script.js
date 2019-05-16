@@ -1,4 +1,4 @@
-function changeprice() {
+/* function changeprice() {
     var slider = document.getElementById("priceInputID");
     var output = document.getElementById("priceOutputID");
     output.innerHTML = slider.value;
@@ -179,3 +179,7 @@ $(".apartment-img2").on("click",function(ev) {
     mainImageElement[0].setAttribute("src", clickedImageUrl);
     ev.preventDefault();
 });
+
+price__range=(0, price)).filter(size__range=(0, size))
+                                            .filter(rooms__exact=rooms).filter(zip__exact=zip)]
+ */
