@@ -397,3 +397,17 @@ input[type="range"]::-webkit-slider-thumb:active {
 transform: scale(1.6);
 }
 
+.errorlist {
+    position: fixed;
+    top:0;
+    width: 100%;
+    left: 0;
+    background: white;
+    border-bottom: 1px solid #dadada;
+    height: 40px;
+}
+.errorlist li  {
+    list-style: none;
+}
+
+
