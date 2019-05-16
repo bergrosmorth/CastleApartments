@@ -1,8 +1,12 @@
+from django.contrib.auth.decorators import login_required
+from django.forms import modelformset_factory
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage
-from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, BuyerInformationForm
+from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, \
+    BuyerInformationForm, ApartmentImageForm
 from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
+
 
 def index(request):
     if 'search_filter' in request.GET:
@@ -60,10 +64,64 @@ def index(request):
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)
 
+
 # /apartment/1
 def get_apartment_by_id(request, id):
     return render(request, 'apartment/apartment_details.html', {
         'apartment': get_object_or_404(Apartment, pk=id)})
+
+@login_required
+def add_apartment_2(request):
+
+    ImageFormSet = modelformset_factory(ApartmentImage, form=ApartmentImageForm, extra=6, max_num=6)
+
+    if request.method == 'POST':
+        apartment_form = ApartmentAddForm(data=request.POST)
+        image_formset = ImageFormSet(request.POST, request.FILES, queryset=ApartmentImage.objects.none())
+
+        if apartment_form.is_valid() and image_formset.is_valid():
+
+            apartment = apartment_form.save(commit=False)
+            apartment.realator = request.user
+            apartment.save()
+
+            images = image_formset.save(commit=False)
+
+            for image in images:
+                image.apartment = apartment
+                image.save()
+
+            return redirect('apartment-index')
+        else:
+            return render(request, 'apartment/add_apartment.html', {
+                'form': apartment_form, 'formset': image_formset})
+    else:
+        apartment_form = ApartmentAddForm()
+        image_formset = ImageFormSet(queryset=ApartmentImage.objects.none())
+        return render(request, 'apartment/add_apartment.html', {
+            'form': apartment_form, 'formset': image_formset})
+
+
+    '''
+    if request.method == 'POST':
+        apartment_form = ApartmentAddForm(data=request.POST, files=request.FILES)
+
+        if apartment_form.is_valid():
+            apartment = apartment_form.save(commit=False)
+            apartment.realator = request.user
+            apartment.save()
+
+            return redirect('apartment-index')
+        else:
+            return render(request, 'apartment/add_apartment.html', {
+                'form': apartment_form})
+
+    else:
+        apartment_form = ApartmentAddForm()
+        return render(request, 'apartment/add_apartment.html', {
+            'form': apartment_form})
+    '''
+
 
 def add_apartment(request):
     if request.method == 'POST':
@@ -91,7 +149,7 @@ def add_apartment(request):
     else:
         form = ApartmentAddForm()
     return render(request, 'apartment/add_apartment.html', {
-        'form': form})
+        'form': form, 'image_form': ApartmentImageForm()})
 
 
 def delete_apartment(request, id):
@@ -134,6 +192,7 @@ def update_apartment(request, id):
 
 def payment_success(request):
     return render(request, 'apartment/payment_success.html')
+
 
 def favorites(request):
     return render(request, 'apartment/favorites.html')

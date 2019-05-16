@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Country(models.Model):
     country = models.CharField(max_length=255)
 
@@ -23,12 +24,18 @@ class Apartment(models.Model):
         return self.address
 
 
+def get_image_filename(instance, filename):
+    id = instance.apartment.id
+    return "post_images/%s" % (id)
+
+
 class ApartmentImage(models.Model):
-    image = models.CharField(max_length=999)
+    # image = models.CharField(max_length=999)
+    image = models.ImageField(upload_to='photos/', blank=True)
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.image
+        return str(self.image)
 
 
 class BuyerInformation(models.Model):
@@ -42,5 +49,3 @@ class BuyerInformation(models.Model):
 
     def __str__(self):
         return self.SSN
-
-

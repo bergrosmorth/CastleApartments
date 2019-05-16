@@ -1,8 +1,19 @@
 {% load humanize %}
+{% load static %}
+
 
 <div class="apartment">
     <a href="/apartment/{{ apartment.id }}">
-        <img class="apartment-img" src="{{apartment.apartmentimage_set.first.image }}"/>
+
+        {% if apartment.apartmentimage_set.all %}
+            <img src="{{ apartment.apartmentimage_set.first.image.url }}" class="apartment-img">
+        {% else %}
+            <img src="{% static 'images/forsidumynd.jpg' %}" class="apartment-img">
+        {% endif %}
+
+        {#  <img class="apartment-img" src="{{apartment.apartmentimage_set.first.image }}"/> #}
+
+
         <h4> {{ apartment.address }}</h4>
         <p> {{ apartment.price|intcomma }} kr.</p>
 

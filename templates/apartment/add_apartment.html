@@ -1,10 +1,20 @@
 <title>Add apartment</title>
 {% extends "base.html" %}
 {% block content %}
-    <form class="form form-horizontal" action="{% url 'add_apartment' %}" method="post" enctype=”multipart/form-data”>
+
+    {#  <form class="form form-horizontal" action="{% url 'add_apartment' %}" method="post" enctype=”multipart/form-data”> #}
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
-        <input type="file" name="myfile" accept="image/*" multiple>
-        <input type="submit" value="Add Apartment" class="btn" id="nextButton"/>
+
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{ form }}
+        {% endfor %}
+
+
+        {# <input type="file" name="photo" accept="image/*" multiple> #}
+        {# <input type="submit" value="Add Apartment" class="btn" id="nextButton"/> #}
+        <input type="submit" value="Add Apartment"/>
     </form>
 {% endblock %}
