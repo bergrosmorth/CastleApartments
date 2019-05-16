@@ -10,5 +10,4 @@ urlpatterns = [
     path('update_apartment/<int:id>', views.update_apartment, name="update_apartment"),
     path('payment_success', views.payment_success, name="payment_success"),
     path('favorites', views.favorites, name="favorites"),
-    path('add_apartment_2', views.add_apartment_2, name='add_apartment_2')
 ]

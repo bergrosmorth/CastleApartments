@@ -30,7 +30,6 @@ def get_image_filename(instance, filename):
 
 
 class ApartmentImage(models.Model):
-    # image = models.CharField(max_length=999)
     image = models.ImageField(upload_to='photos/', blank=True)
     apartment = models.ForeignKey(Apartment, on_delete=models.CASCADE)
 
