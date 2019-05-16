@@ -195,7 +195,12 @@ label[for=id_password] {
 #loginpageApartments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 2%;
+}
+
+#loginpageApartments div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 
 .apartment-img {
@@ -240,6 +245,10 @@ label[for=id_password] {
     display: inline-block;
 }
 
+#nextButton:hover {
+    background-color: green;
+}
+
 #goBackButton {
     background-color: #FE5353;
     border-color: #FE0101;
@@ -250,6 +259,10 @@ label[for=id_password] {
     display: inline-block;
 }
 
+#goBackButton:hover {
+    background-color: #FE0101;
+}
+
 #mainButton {
     background-color: lightsteelblue;
     border-color: #b0c4ff;
@@ -258,6 +271,10 @@ label[for=id_password] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+#mainButton:hover {
+  background-color: steelblue;
 }
 
 #paymentText {
@@ -474,6 +491,8 @@ h5, h6 {
     }
 
 
+
+
 }
 
 @media screen and (max-width: 1100px){
@@ -499,6 +518,11 @@ h5, h6 {
     height: 22em;
     }
 
+    #loginpageApartments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 }
 
 
@@ -523,6 +547,12 @@ h5, h6 {
     .apartment-img {
     width: 34em;
     height: 28em;
+    }
+
+    #loginpageApartments {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
     }
 
 }
