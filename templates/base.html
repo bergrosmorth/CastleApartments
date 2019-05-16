@@ -45,9 +45,6 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                    {% if not user.is_superuser %}
-                        <li><a href="{% url 'favorites' %}" class="navContent"><h4>Favorite apartments</h4></a></li>
-                    {% endif %}
                     {% if user.is_superuser %}
                         <li><a href="{% url 'add_apartment' %}" class="navContent"><h4>Add apartment</h4></a></li>
                     {% endif %}

@@ -1,18 +1,22 @@
 <title>Apartment info</title>
 {% extends 'base.html' %}
 {% load humanize %}
+{% load static %}
+
 
 {% block content %}
 
     <div class="container-fluid">
         <div class="row">
+
             <div class="col-md-6">
-                {% for apartmentimage in apartment.apartmentimage_set.all %}
-                        {% if forloop.counter == 6 %}
-                    <img src="{{ apartmentimage.image }}" class="apartment-img1"/>
-                        {% endif %}
-                {% endfor %}
+                {% if apartment.apartmentimage_set.all %}
+                    <img src="{{ apartment.apartmentimage_set.first.image.url }}" class="apartment-img1">
+                {% else %}
+                    <img src="{% static 'images/default.png' %}" class="apartment-img1">
+                {% endif %}
             </div>
+
             <div class="col-md-3">
                 <h1> {{ apartment.address }} | {{ apartment.zip }} {{ apartment.city }}</h1>
                 <h3>Country: {{ apartment.country }}</h3>
@@ -27,9 +31,6 @@
                     <button class="btn" id="nextButton">Buy Apartment</button>
                     <!-- kannski bæta við make offer -->
                     </a>
-                    <button type="button" class="btn" id="mainButton">
-                         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorite
-                    </button>
                 {% endif %}
                 {% if user.is_authenticated and user.is_superuser %}
                     <a href="{% url 'delete_apartment' apartment.id %}" class="block btn" id="mainButton">Delete Apartment</a>
@@ -41,13 +42,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 image-set">
-                    {% for apartmentimage in apartment.apartmentimage_set.all %}
-                        {% if forloop.counter < 7 %}
+                    {% if apartment.apartmentimage_set.all %}
+                        {% for image in apartment.apartmentimage_set.all %}
                             <a href="#">
-                                <img src="{{ apartmentimage.image }}" class="apartment-img2" id="ApartmentPhotos"/>
+                                <img src="{{ image.image.url }}" class="apartment-img2">
                             </a>
-                        {% endif %}
-                {% endfor %}
+                        {% endfor %}
+                    {% endif %}
             </div>
             <br>
             <div class="col-md-6">

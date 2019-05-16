@@ -12,7 +12,6 @@ class Profile(models.Model):
     phone = models.IntegerField(blank=True)
     address = models.CharField(max_length=999, blank=True)
     email = models.CharField(max_length=999, blank=True)
-    favorite_apartments = models.ForeignKey(Apartment, on_delete=models.CASCADE, blank=True)
     image = models.CharField( max_length=999, default='https://www.autourdelacom.fr/wp-content/uploads/2018/03/default-user-image.png', blank=True)
 
 

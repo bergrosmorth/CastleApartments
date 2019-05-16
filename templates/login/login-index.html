@@ -23,7 +23,7 @@
         <h3>Apartments for sale:</h3>
         <h6>Newest first</h6>
     </div>
-    <div class="form-group col-xs-9">
+    <div class="form-group col-xs-12" id="loginpageApartments">
         {% for apartment in apartments %}
             {% include 'apartment/single_apartment.html' with apartment=apartment %}
         {% endfor %}
