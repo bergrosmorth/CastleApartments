@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from field_history.tracker import FieldHistoryTracker
 
 
 class Country(models.Model):
