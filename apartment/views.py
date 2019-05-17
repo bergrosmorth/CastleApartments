@@ -149,7 +149,7 @@ def update_openhouse(request, id):
         form = UpdateOpenHouseForm(data=request.POST, instance=instance)
         if form.is_valid():
             form.save()
-            return redirect('apartment_details', id=id)
+            return redirect('apartment-index')
     else:
         form = UpdateOpenHouseForm(instance=instance)
     return render(request, 'apartment/update_openhouse.html', {
