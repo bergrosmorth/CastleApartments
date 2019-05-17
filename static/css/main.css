@@ -9,6 +9,17 @@ html, body {
     margin: 0;
 }
 
+.register-form {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.helptext {
+    margin-right: 10%;
+    margin-bottom: 10%
+}
+
 .frontpage {
     margin-left: -15px;
     margin-right: -15px;
