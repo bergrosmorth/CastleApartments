@@ -63,10 +63,6 @@ html, body {
     border-right-color: rgba(60,60,60,.4);
 }
 
-.login {
-    margin-top: 10px;
-}
-
 .cheesySlogan {
     color: whitesmoke;
     background-blend-mode: hue;
