@@ -50,7 +50,8 @@ def index(request):
 
     context = {
         'apartments': Apartment.objects.all().order_by('address'),
-        'openhouse': OpenHouse.objects.all().order_by('address')
+        'openhouse': OpenHouse.objects.all().order_by('address'),
+        'index': 'true'
     }
     return render(request, 'apartment/apartment-index.html', context)
 
