@@ -68,11 +68,12 @@
                 {% for open in openhouse %}
                     <hr><h5 id="openHouseInfo"><br>Address:  {{ open.address}}<br>
                          Date:  {{ open.date }}<br>
-                         Time:  {{ open.time }}</h5><hr>
+                         Time:  {{ open.time }}</h5>
                     {% if user.is_superuser %}
                         <a href="{% url 'update_openhouse' open.id %}" class="btn" id="mainButton">Update</a>
                         <a href="{% url 'delete_openhouse' open.id %}" class="btn" id="mainButton">Delete</a>
                     {% endif %}
+                    <hr>
                 {% endfor %}
                 </div>
             </div>
