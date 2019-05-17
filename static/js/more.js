@@ -143,6 +143,7 @@ $(document).ready(function(){
             },
             success: function(resp) {
                 let newHTML = resp.data.map(d => {
+                    d.price = d.price.toLocaleString()
                     return ` <div class="apartment">
                     <a href="/apartment/${d.id}">
                         <img class="apartment-img" src="${d.firstimage}">

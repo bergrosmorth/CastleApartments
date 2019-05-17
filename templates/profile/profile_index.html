@@ -1,9 +1,13 @@
+<title>My profile</title>
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <img src="{{ profile.image }}" class="profile-image2">
+                <div id="viewSearchHistory">
+                    <a href="{% url 'searchHistory'%}" type="btn" class="block btn" id="mainButton">View my search history</a>
+                </div>
             </div>
             <div class="col-6">
                 <h6><b>Username: {{ user.username}}</b></h6>
@@ -11,8 +15,7 @@
                     {% csrf_token %}
                     {{ form }}
                     <br>
-                    <input type="submit" value="Save ! " class="btn" id="nextButton" />
-
+                    <input type="submit" value="Save!" class="btn" id="nextButton" />
                 </form>
             </div>
         </div>
@@ -20,4 +23,4 @@
 
     <div class="container">
 </div>
-{% endblock %}
+{% endblock %}x

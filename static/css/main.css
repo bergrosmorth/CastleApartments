@@ -9,6 +9,17 @@ html, body {
     margin: 0;
 }
 
+.register-form {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.helptext {
+    margin-right: 10%;
+    margin-bottom: 10%
+}
+
 .frontpage {
     margin-left: -15px;
     margin-right: -15px;
@@ -74,7 +85,7 @@ html, body {
 .navbar-brand {
     position: relative;
     color: steelblue;
-    font-style: bold;
+    font-weight: bolder;
 }
 
 .navContent {
@@ -175,6 +186,8 @@ label[for=id_password] {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
 
 .openHouses {
     padding: 0.5em;
@@ -512,10 +525,18 @@ input[type=password] {
 
 }
 
-#orderby {
+#order_by {
     margin-top: 15px;
     text-align: right;
     width: 100%;
+}
+
+.searchHistory {
+    padding: 3em;
+}
+
+#viewSearchHistory {
+    float: right;
 }
 
 .errorMsg{
@@ -531,7 +552,6 @@ h5, h6 {
     margin-right: 15px;
     margin-left: 15px;
 }
-
 
 @media screen and (max-width: 1250px){
     #filter-box {
