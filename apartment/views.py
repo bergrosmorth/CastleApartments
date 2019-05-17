@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.forms import modelformset_factory
 from django.shortcuts import render, get_object_or_404, redirect
 from apartment.models import Apartment, ApartmentImage, OpenHouse
+from profile.models import SearchHistory
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, \
     BuyerInformationForm, ApartmentImageForm, AddOpenHouseForm, UpdateOpenHouseForm
 from django.http import JsonResponse
@@ -10,6 +11,7 @@ from django.core.files.storage import FileSystemStorage
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
+        SearchHistory(user=request.user, search=search_filter).save()
         apartmentos = [{
             'id': x.id,
             'firstimage': x.apartmentimage_set.first().image.url,
