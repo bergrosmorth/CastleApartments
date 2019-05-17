@@ -16,5 +16,5 @@ class Profile(models.Model):
 
 
 class SearchHistory(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     search = models.CharField(max_length=999)
