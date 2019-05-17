@@ -1,0 +1,10 @@
+<title>Search history</title>
+{% extends "base.html" %}
+{% block content %}
+    <div class="searchHistory">
+        <h2>Your search history:</h2>
+        {% for search in history %}
+             <hr><h4>{{ search.search}}</h4>
+        {% endfor %}
+    </div>
+{% endblock %}

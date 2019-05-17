@@ -520,6 +520,14 @@ input[type=password] {
     width: 100%;
 }
 
+.searchHistory {
+    padding: 3em;
+}
+
+#viewSearchHistory {
+    float: right;
+}
+
 .errorMsg{
     background-color: indianred;
     color: whitesmoke;
