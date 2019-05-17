@@ -244,6 +244,10 @@ label[for=id_password] {
     display: inline-block;
 }
 
+#nextButton:hover {
+    background-color: green;
+}
+
 #goBackButton {
     background-color: #FE5353;
     border-color: #FE0101;
@@ -254,6 +258,10 @@ label[for=id_password] {
     display: inline-block;
 }
 
+#goBackButton:hover {
+    background-color: #FE0101;
+}
+
 #mainButton {
     background-color: lightsteelblue;
     border-color: #b0c4ff;
@@ -262,6 +270,10 @@ label[for=id_password] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+#mainButton:hover {
+  background-color: steelblue;
 }
 
 #paymentText {
@@ -308,6 +320,7 @@ label[for=id_cardnumber] {
     color: #444;
     padding: .6em 1.4em .5em .8em;
     width: 80%;
+    margin: 10px;
     box-sizing: border-box;
     box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
     border-radius: .5em;
@@ -341,12 +354,13 @@ label[for=id_cardnumber] {
     font-weight:normal;
 }
 
-#rooms {
+.rooms {
     font-family: sans-serif;
     font-size: 90%;
     color: #444;
     padding: .6em 1.4em .5em .8em;
-    width: 25%;
+    margin: 10px;
+    width: 30%;
     box-sizing: border-box;
     box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
     border-radius: .5em;
@@ -360,21 +374,21 @@ label[for=id_cardnumber] {
     background-size: .65em auto, 100%;
     position: relative;
 }
-#rooms::-ms-expand {
+.rooms::-ms-expand {
     display: none;
 }
 
-#rooms:hover {
+.rooms:hover {
     border-color: #888;
 }
 
-#rooms:focus {
+.rooms:focus {
     border-color: #aaa;
     color: #222;
     outline: none;
 }
 
-#rooms option {
+.rooms option {
     font-weight:normal;
 }
 
@@ -445,6 +459,26 @@ input[type=text]{
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#orderby {
+    margin-top: 25px;
+    margin-left: 30%;
+    width: 100%;
+}
+
+.errorMsg{
+    background-color: indianred;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h5, h6 {
+    display: inline;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 

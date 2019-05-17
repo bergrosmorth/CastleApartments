@@ -21,9 +21,9 @@ def index(request):
     if 'range_filter' in request.GET:
         price = request.GET.get('price')
         size = request.GET.get('size')
-        rooms = request.GET.get('rooms')
+        rooms1 = request.GET.get('rooms1')
+        rooms2 = request.GET.get('rooms2')
         zip = request.GET.get('zip')
-        print(zip)
         apartmentos = [{
             'id': x.id,
             'firstimage': x.apartmentimage_set.first().image.url,
@@ -33,7 +33,7 @@ def index(request):
             'rooms': x.rooms,
             'zip': x.zip
         } for x in Apartment.objects.filter(price__range=(0, price)).filter(size__range=(0, size))
-                                            .filter(rooms__exact=int(rooms)).filter(zip__exact=int(zip))]
+                                        .filter(rooms__range=(int(rooms1), int(rooms2))).filter(zip__exact=int(zip))]
         return JsonResponse({'data': apartmentos})
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'apartment/apartment-index.html', context)

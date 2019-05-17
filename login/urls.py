@@ -22,7 +22,7 @@ class LoginViewWithApartments(LoginView):
 
     def get_context_data(self, **kwargs):
         new_context = super(LoginView, self).get_context_data(**kwargs)
-        new_context['apartments'] = Apartment.objects.all()
+        new_context['apartments'] = Apartment.objects.all().order_by('-id')
         return new_context
 
 

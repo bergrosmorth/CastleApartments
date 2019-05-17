@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'profile.apps.RealtorConfig',
     'apartment.apps.ApartmentsConfig',
-    'field_history',
 ]
 
 MIDDLEWARE = [
