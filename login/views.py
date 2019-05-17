@@ -5,7 +5,6 @@ from profile.models import Profile
 from django.contrib.auth import authenticate
 
 
-# Create your views here.
 def get_frontPage(request):
     context = {'apartments': Apartment.objects.all().order_by('address')}
     return render(request, 'login/login-index.html', context)

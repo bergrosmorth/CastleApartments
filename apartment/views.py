@@ -6,7 +6,7 @@ from profile.models import SearchHistory
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, \
     BuyerInformationForm, ApartmentImageForm, AddOpenHouseForm, UpdateOpenHouseForm
 from django.http import JsonResponse
-from django.core.files.storage import FileSystemStorage
+
 
 def index(request):
     if 'search_filter' in request.GET:

@@ -26,8 +26,6 @@ class LoginViewWithApartments(LoginView):
         return new_context
 
 
-
-
 urlpatterns = [
     path('', LoginViewWithApartments.as_view(template_name='login/login-index.html'), name='login'),
     path('register', views.register, name="register"),

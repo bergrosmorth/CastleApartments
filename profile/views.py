@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from profile.models import Profile, SearchHistory
 from profile.forms.profile_form import ProfileForm
-# Create your views here.
+
 
 def profile(request):
     profile = Profile.objects.filter( user=request.user).first()

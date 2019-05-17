@@ -1,5 +1,4 @@
 from django.forms import ModelForm, widgets
-from django import forms
 from apartment.models import Apartment, BuyerInformation, ApartmentImage, OpenHouse
 from profile.models import Profile
 
