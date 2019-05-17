@@ -75,18 +75,21 @@ $(document).ready(function (){
         e.preventDefault();
         let zipcode = $('#zip').val();
         let zipcodeint = parseInt(zipcode);
-        let pprice = $('#priceInputID').val();
-        let ppricemil = pprice*1000000;
-        let ssize = $('#sizeInputID').val();
-        let rroom = $('#rooms').val();
+        let price = $('#priceInputID').val();
+        let pricemil = price*1000000;
+        let size = $('#sizeInputID').val();
+        let room2 = $('#rooms2').val();
+        let room1 = $('#rooms1').val();
+        searchvalid(zipcodeint,room2,room1)
         $.ajax({
             url: '/apartment/?range_filter=',
             type: 'GET',
             data: {
                 zip: zipcodeint,
-                price: ppricemil,
-                size: ssize,
-                rooms: rroom,
+                price: pricemil,
+                size: size,
+                rooms2: room2,
+                rooms1: room1
             },
             success: function (resp) {
                 var newHTML = resp.data.map(d => {
@@ -109,3 +112,21 @@ $(document).ready(function (){
         });
     });
 });
+
+function searchvalid(zipcodeint,room2,room1){
+    if (room2 <= room1){
+            $('#roomselect').attr('hidden',false);
+            setTimeout(function(){
+                $('#roomselect').attr('hidden',true);
+            },3000);
+            return false
+        };
+        if (isNaN(zipcodeint) == true){
+            $('#zipselect').attr('hidden',false);
+            setTimeout(function(){
+                $('#zipselect').attr('hidden',true);
+            },3000);
+            return false
+        }
+    return true
+}

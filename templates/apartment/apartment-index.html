@@ -16,11 +16,12 @@
             <select id="zip">
                 <option>Select zip code</option>
             </select>
+                <p hidden="true" class="errorMsg 1" id="zipselect">Invalid zip code!</p>
             </div>
             <div class="col-s-12">
                 Number of rooms
-                <br><select id="rooms">
-                <option>Select rooms</option>
+                <br><select class="rooms" id="rooms1">
+                <option>0</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -30,8 +31,20 @@
                 <option>7</option>
                 <option>8</option>
                 <option>9</option>
-                <option>10</option>
-            </select>
+            </select> To
+                <select class="rooms" id="rooms2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+                <p hidden="true" class="errorMsg" id="roomselect">Invalid room selection!</p>
             </div>
             <div class="col-s-12">
                 Max price
