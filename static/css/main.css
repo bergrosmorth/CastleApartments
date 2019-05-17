@@ -74,7 +74,7 @@ html, body {
 .navbar-brand {
     position: relative;
     color: steelblue;
-    font-style: bold;
+    font-weight: bolder;
 }
 
 .navContent {
@@ -175,6 +175,8 @@ label[for=id_password] {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
 
 .openHouses {
     padding: 0.5em;
@@ -513,8 +515,8 @@ input[type=password] {
 }
 
 #order_by {
-    margin-top: 25px;
-    margin-left: 30%;
+    margin-top: 15px;
+    text-align: right;
     width: 100%;
 }
 
@@ -532,13 +534,12 @@ h5, h6 {
     margin-left: 15px;
 }
 
-
 @media screen and (max-width: 1250px){
     #filter-box {
         display: none;
     }
 
-    #openHouses {
+    .openHouses {
         display: none;
     }
 
