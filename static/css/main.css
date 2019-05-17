@@ -292,6 +292,21 @@ label[for=id_password] {
   background-color: steelblue;
 }
 
+#filterBtn {
+    background-color: lightsteelblue;
+    border-color: #b0c4ff;
+    margin: 0.5em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#filterBtn:hover {
+  background-color: steelblue;
+}
+
+
 #paymentText {
     text-align: center;
     margin-top: 2%;
