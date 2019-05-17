@@ -503,6 +503,10 @@ h5, h6 {
         display: none;
     }
 
+    #openHouses {
+        display: none;
+    }
+
     #searchbox {
         display: none;
     }
@@ -532,6 +536,7 @@ h5, h6 {
     #searchbtn {
         display: none;
     }
+
 
     #apartments {
         width: 100%;
