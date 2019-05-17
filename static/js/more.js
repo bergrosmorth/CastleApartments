@@ -130,3 +130,34 @@ function searchvalid(zipcodeint,room2,room1){
         }
     return true
 }
+
+$(document).ready(function(){
+    $('.orderby').on('click',function(e) {
+        let order_value = $(this).attr("value");
+        e.preventDefault();
+        $.ajax({
+            url: '/apartment/',
+            type: "GET",
+            data: {
+                order_value: order_value
+            },
+            success: function(resp) {
+                let newHTML = resp.data.map(d => {
+                    return ` <div class="apartment">
+                    <a href="/apartment/${d.id}">
+                        <img class="apartment-img" src="${d.firstimage}">
+                        <h4> ${d.address}</h4>
+                        <p> ${d.price} kr.</p>
+                        </a>
+                </div>`
+                });
+                console.log(newHTML)
+                $('#apartments').html(newHTML.join(''));
+                $('#searchbox').val('')
+            },
+            error: function (xhr, status, error) {
+                console.error(error)
+            }
+        })
+    })
+});
