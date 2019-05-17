@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <form class="form form-horizontal" action="{% url 'update_apartment' openHouse.id%}" method="post">
+    <form class="form form-horizontal" action="{% url 'update_apartment' id%}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Update Apartment" class="btn" id="nextButton"/>
