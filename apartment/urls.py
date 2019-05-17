@@ -9,4 +9,7 @@ urlpatterns = [
     path('buy_apartment/<int:id>', views.buy_apartment, name="buy_apartment"),
     path('update_apartment/<int:id>', views.update_apartment, name="update_apartment"),
     path('payment_success', views.payment_success, name="payment_success"),
+    path('add_openhouse', views.add_openhouse, name="add_openhouse"),
+    path('update_openhouse/<int:id>', views.update_openhouse, name="update_openhouse"),
+    path('delete_openhouse/<int:id>', views.delete_openhouse, name="delete_openhouse"),
 ]

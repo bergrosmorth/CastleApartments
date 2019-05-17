@@ -167,11 +167,27 @@ label[for=id_password] {
 }
 
 #filter-box {
+    padding: 0.5em;
+    text-align: center;
     border-radius: 25px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-color: whitesmoke;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.openHouses {
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#openHouseInfo {
+    text-align: left;
 }
 
 .col-s-12 {
@@ -200,7 +216,7 @@ label[for=id_password] {
 #loginpageApartments div {
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto
 }
 
 .apartment-img {
@@ -214,8 +230,7 @@ label[for=id_password] {
 
 .apartment-img2 {
     width: 18%;
-    margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 1%;
 }
 
 #apartmentdesc {
@@ -276,6 +291,21 @@ label[for=id_password] {
 #mainButton:hover {
   background-color: steelblue;
 }
+
+#filterBtn {
+    background-color: lightsteelblue;
+    border-color: #b0c4ff;
+    margin: 0.5em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#filterBtn:hover {
+  background-color: steelblue;
+}
+
 
 #paymentText {
     text-align: center;
@@ -462,6 +492,26 @@ input[type=text]{
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+input[type=password] {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+}
+
 #orderby {
     margin-top: 25px;
     margin-left: 30%;
@@ -488,6 +538,10 @@ h5, h6 {
         display: none;
     }
 
+    #openHouses {
+        display: none;
+    }
+
     #searchbox {
         display: none;
     }
@@ -498,6 +552,10 @@ h5, h6 {
 
     #apartments {
         width: 100%;
+    }
+
+    #logincontainer {
+        width: 50%;
     }
 
 
@@ -517,6 +575,7 @@ h5, h6 {
     #searchbtn {
         display: none;
     }
+
 
     #apartments {
         width: 100%;
@@ -565,4 +624,11 @@ h5, h6 {
         justify-content: center;
     }
 
+}
+
+
+@media screen and (max-width: 800px){
+    #logincontainer {
+        width: 70%;
+    }
 }

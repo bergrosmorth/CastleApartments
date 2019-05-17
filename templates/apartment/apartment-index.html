@@ -13,30 +13,20 @@
         </div>
     </div>
     <div>
-        <div class="form-group col-xs-2" id="filter-box">
-            <div class="col-s-12" id="zip1">
-                Zip Code
-            <br>
-            <select id="zip">
-                <option>Select zip code</option>
-            </select>
-                <p hidden="true" class="errorMsg 1" id="zipselect">Invalid zip code!</p>
-            </div>
-            <div class="col-s-12">
-                Number of rooms
-                <br><select class="rooms" id="rooms1">
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-            </select> To
-                <select class="rooms" id="rooms2">
+        <div class="form-group col-xs-2">
+            <div id="filter-box">
+                <div class="col-s-12" id="zip1">
+                    Zip Code
+                    <br>
+                    <select id="zip">
+                        <option>Select zip code</option>
+                    </select>
+                    <p hidden="true" class="errorMsg 1" id="zipselect">Invalid zip code!</p>
+                </div>
+                <div class="col-s-12">
+                    Number of rooms
+                    <br><select class="rooms" id="rooms1">
+                    <option>0</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -46,20 +36,50 @@
                     <option>7</option>
                     <option>8</option>
                     <option>9</option>
-                    <option>10</option>
-                </select>
-                <p hidden="true" class="errorMsg" id="roomselect">Invalid room selection!</p>
+                </select> To
+                    <select class="rooms" id="rooms2">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                    <p hidden="true" class="errorMsg" id="roomselect">Invalid room selection!</p>
+                </div>
+                <div class="col-s-12">
+                    Max price
+                    <input type="range" min="1" max="300" value="300" class="slider" id="priceInputID" oninput=changeprice()>
+                    <p><span id="priceOutputID"></span> M ISK</p>
+                </div>
+                <div class="col-s-12">
+                    Max size
+                    <input type="range" min="1" max="500" value="500" class="slider" id="sizeInputID" oninput=changesize()>
+                    <p><span id="sizeOutputID"></span> m² </p>
+                    <button type="submit" id="filterBtn" class="btn"><span class="glyphicon glyphicon-search"></span> Search</button>
+                </div>
             </div>
-            <div class="col-s-12">
-                Max price
-                <input type="range" min="1" max="300" value="300" class="slider" id="priceInputID" oninput=changeprice()>
-                <p><span id="priceOutputID"></span> M ISK</p>
-            </div>
-            <div class="col-s-12">
-                Max size
-                <input type="range" min="1" max="500" value="500" class="slider" id="sizeInputID" oninput=changesize()>
-                <p><span id="sizeOutputID"></span> m² </p>
-                <button type="submit" id="mainButton" class="leita"><span class="glyphicon glyphicon-search"></span> Search</button>
+                <br>
+                <div class="openHouses">
+                    <h4>Open houses this week:</h4>
+                    {% if user.is_superuser %}
+                        <a href="{% url 'add_openhouse' %}" class="btn" id="mainButton">Add</a>
+                    {% endif %}
+                {% for open in openhouse %}
+                    <hr><h5 id="openHouseInfo"><br>Address:  {{ open.address}}<br>
+                         Date:  {{ open.date }}<br>
+                         Time:  {{ open.time }}</h5>
+                    {% if user.is_superuser %}
+                        <a href="{% url 'update_openhouse' open.id %}" class="btn" id="mainButton">Update</a>
+                        <a href="{% url 'delete_openhouse' open.id %}" class="btn" id="mainButton">Delete</a>
+                    {% endif %}
+                    <hr>
+                {% endfor %}
+                </div>
             </div>
         </div>
         <div class="form-group col-xs-10" id="apartments">
@@ -67,5 +87,6 @@
                 {% include 'apartment/single_apartment.html' with apartment=apartment %}
             {% endfor %}
         </div>
+
     </div>
 {% endblock %}

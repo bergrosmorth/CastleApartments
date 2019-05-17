@@ -1,0 +1,9 @@
+<title>Add open house</title>
+{% extends "base.html" %}
+{% block content %}
+    <form class="form form-horizontal" action="{% url 'add_openhouse'%}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Add open house" class="btn" id="nextButton"/>
+    </form>
+{% endblock %}
