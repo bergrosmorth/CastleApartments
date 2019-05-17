@@ -71,7 +71,7 @@ function changesize() {
 }
 
 $(document).ready(function (){
-    $('.leita').on('click', function (e) {
+    $('#filterBtn').on('click', function (e) {
         e.preventDefault();
         let zipcode = $('#zip').val();
         let zipcodeint = parseInt(zipcode);

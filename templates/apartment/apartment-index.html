@@ -56,25 +56,24 @@
                     Max size
                     <input type="range" min="1" max="500" value="500" class="slider" id="sizeInputID" oninput=changesize()>
                     <p><span id="sizeOutputID"></span> m² </p>
-                    <button type="submit" id="mainButton" class="leita"><span class="glyphicon glyphicon-search"></span> Search</button>
+                    <button type="submit" id="filterBtn" class="btn"><span class="glyphicon glyphicon-search"></span> Search</button>
                 </div>
             </div>
                 <br>
-                <div id="openHouses">
-                    <h4>Open houses:</h4>
+                <div class="openHouses">
+                    <h4>Open houses this week:</h4>
                     {% if user.is_superuser %}
                         <a href="{% url 'add_openhouse' %}" class="btn" id="mainButton">Add</a>
                     {% endif %}
-                <br>
                 {% for open in openhouse %}
-                    <hr>
-                    <h5>Address: {{ open.address}}<br>
-                        Date:  {{ open.date }}<br>
-                        Time:  {{ open.time }}</h5>
+                    <hr><h5 id="openHouseInfo"><br>Address:  {{ open.address}}<br>
+                         Date:  {{ open.date }}<br>
+                         Time:  {{ open.time }}</h5>
                     {% if user.is_superuser %}
                         <a href="{% url 'update_openhouse' open.id %}" class="btn" id="mainButton">Update</a>
                         <a href="{% url 'delete_openhouse' open.id %}" class="btn" id="mainButton">Delete</a>
                     {% endif %}
+                    <hr>
                 {% endfor %}
                 </div>
             </div>
