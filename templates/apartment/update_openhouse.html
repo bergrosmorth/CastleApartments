@@ -4,6 +4,7 @@
     <form class="form form-horizontal" action="{% url 'update_openhouse' id%}" method="post">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Update Openhouse" class="btn" id="nextButton"/>
+        <input type="submit" value="Update" class="btn" id="nextButton"/>
+        <a href="{% url 'apartment-index'%}" type="btn" class="block btn" id="goBackButton">Quit</a>
     </form>
 {% endblock %}
