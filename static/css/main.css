@@ -176,7 +176,7 @@ label[for=id_password] {
     background-repeat: no-repeat;
 }
 
-#openHouses {
+.openHouses {
     padding: 0.5em;
     text-align: center;
     border-radius: 25px;
@@ -184,6 +184,10 @@ label[for=id_password] {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#openHouseInfo {
+    text-align: left;
 }
 
 .col-s-12 {
