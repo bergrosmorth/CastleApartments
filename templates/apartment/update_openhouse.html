@@ -1,0 +1,9 @@
+<title>Update open house</title>
+{% extends "base.html" %}
+{% block content %}
+    <form class="form form-horizontal" action="{% url 'update_openhouse' id%}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Update Openhouse" class="btn" id="nextButton"/>
+    </form>
+{% endblock %}

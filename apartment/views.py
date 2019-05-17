@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.forms import modelformset_factory
 from django.shortcuts import render, get_object_or_404, redirect
-from apartment.models import Apartment, ApartmentImage
+from apartment.models import Apartment, ApartmentImage, OpenHouse
 from apartment.forms.apartment_form import ApartmentAddForm, ApartmentUpdateForm, BuyApartmentForm, \
-    BuyerInformationForm, ApartmentImageForm
+    BuyerInformationForm, ApartmentImageForm, AddOpenHouseForm, UpdateOpenHouseForm
 from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
 
@@ -35,7 +35,10 @@ def index(request):
         } for x in Apartment.objects.filter(price__range=(0, price)).filter(size__range=(0, size))
                                         .filter(rooms__range=(int(rooms1), int(rooms2))).filter(zip__exact=int(zip))]
         return JsonResponse({'data': apartmentos})
-    context = {'apartments': Apartment.objects.all().order_by('address')}
+    context = {
+        'apartments': Apartment.objects.all().order_by('address'),
+        'openhouse': OpenHouse.objects.all().order_by('address')
+    }
     return render(request, 'apartment/apartment-index.html', context)
 
 
@@ -48,23 +51,17 @@ def get_apartment_by_id(request, id):
 def add_apartment(request):
 
     ImageFormSet = modelformset_factory(ApartmentImage, form=ApartmentImageForm, extra=6, max_num=6)
-
     if request.method == 'POST':
         apartment_form = ApartmentAddForm(data=request.POST)
         image_formset = ImageFormSet(request.POST, request.FILES, queryset=ApartmentImage.objects.none())
-
         if apartment_form.is_valid() and image_formset.is_valid():
-
             apartment = apartment_form.save(commit=False)
             apartment.realator = request.user
             apartment.save()
-
             images = image_formset.save(commit=False)
-
             for image in images:
                 image.apartment = apartment
                 image.save()
-
             return redirect('apartment-index')
         else:
             return render(request, 'apartment/add_apartment.html', {
@@ -119,3 +116,36 @@ def payment_success(request):
     return render(request, 'apartment/payment_success.html')
 
 
+def add_openhouse(request):
+    if request.method == 'POST':
+        openHouse_form = AddOpenHouseForm(data=request.POST)
+        if openHouse_form.is_valid():
+            openhouse = openHouse_form.save(commit=False)
+            openhouse.save()
+            return redirect('apartment-index')
+        else:
+            return render(request, 'apartment/add_openhouse.html', {
+                'form': openHouse_form})
+    else:
+        openHouse_form = AddOpenHouseForm()
+        return render(request, 'apartment/add_openhouse.html', {
+            'form': openHouse_form})
+
+
+def update_openhouse(request, id):
+    instance = get_object_or_404(OpenHouse, pk=id)
+    if request.method == "POST":
+        form = UpdateOpenHouseForm(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('apartment_details', id=id)
+    else:
+        form = UpdateOpenHouseForm(instance=instance)
+    return render(request, 'apartment/update_openhouse.html', {
+        'form': form,
+        'id': id})
+
+def delete_openhouse(request, id):
+    openHouse = get_object_or_404(OpenHouse, pk=id)
+    openHouse.delete()
+    return redirect('apartment-index')

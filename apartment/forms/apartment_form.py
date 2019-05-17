@@ -1,6 +1,6 @@
 from django.forms import ModelForm, widgets
 from django import forms
-from apartment.models import Apartment, BuyerInformation, ApartmentImage
+from apartment.models import Apartment, BuyerInformation, ApartmentImage, OpenHouse
 from profile.models import Profile
 
 
@@ -67,3 +67,25 @@ class ApartmentImageForm(ModelForm):
     class Meta:
         model = ApartmentImage
         exclude = ['id', 'apartment']
+
+
+class AddOpenHouseForm(ModelForm):
+    class Meta:
+        model = OpenHouse
+        exclude = ['id']
+        widgets = {
+            'address': widgets.TextInput(attrs={'class': 'form-control'}),
+            'date': widgets.DateInput(attrs={'class': 'form-control'}),
+            'time': widgets.TimeInput(attrs={'class': 'form-control'})
+        }
+
+
+class UpdateOpenHouseForm(ModelForm):
+    class Meta:
+        model = OpenHouse
+        exclude = ['id']
+        widgets = {
+            'address': widgets.TextInput(attrs={'class': 'form-control'}),
+            'date': widgets.DateInput(attrs={'class': 'form-control'}),
+            'time': widgets.TimeInput(attrs={'class': 'form-control'})
+        }
